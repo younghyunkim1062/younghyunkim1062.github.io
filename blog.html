@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Young Hyun Kim</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="badge"><span>YK</span></span>Young Hyun Kim</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Main Page</a></li>
+      <li><a href="grad-school.html" class="nav-link">How to Start Grad School</a></li>
+      <li class="has-dropdown">
+        <a href="research.html" class="nav-link">Research</a>
+        <div class="dropdown"><a href="research.html">Overview</a><a href="protocols.html">Protocols</a><a href="figures.html">Figures &amp; Illustration</a></div>
+      </li>
+      <li><a href="publications.html" class="nav-link">Publications</a></li>
+      <li class="has-dropdown">
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <div class="dropdown"><a href="blog.html">Overview</a><a href="blog-travel.html">Travel</a><a href="blog-making.html">Making</a></div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<section class="tight">
+  <div class="container">
+    <span class="eyebrow" style="background:#f8dcec;color:#a3316b;">Blog</span>
+    <h1>Off the Bench</h1>
+    <p style="font-size:1.05rem; max-width:720px;">Two ongoing series: places I travel to, and things I build outside the lab
+      — mostly educational robots from my robotics-teaching days.</p>
+
+    <div class="blog-subnav">
+      <a href="blog.html" class="active">All</a>
+      <a href="blog-travel.html">🗺️ Travel</a>
+      <a href="blog-making.html">🤖 Making</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="container">
+    <div class="grid grid-2">
+      <a href="blog-travel.html" class="card post-card" style="color:inherit;">
+        <div class="thumb" style="background:linear-gradient(135deg, var(--sky), var(--mint));">🗺️ Travel map</div>
+        <span class="tag">Travel</span>
+        <h3>An interactive map of everywhere I've been</h3>
+        <p class="mb-0">Click a pin, see the photos and the story. Starting from Seoul and growing from there.</p>
+      </a>
+      <a href="blog-making.html" class="card post-card" style="color:inherit;">
+        <div class="thumb" style="background:linear-gradient(135deg, var(--mustard), var(--coral));">🤖 Making</div>
+        <span class="tag mustard">Making</span>
+        <h3>Educational robots &amp; build notes</h3>
+        <p class="mb-0">Robots and materials from robotics education, and other things I've built for fun.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3 style="color:#fff;">Young Hyun Kim</h3>
+        <p style="color:rgba(214,232,230,0.75); max-width:340px;">Ph.D. Applicant · Cardiac Tissue Engineering &amp; Computational Bioimaging<br>
+        Biological Systems Engineering Laboratory, Sejong University, Seoul, Korea</p>
+      </div>
+      <div>
+        <h4 style="color:#fff;">Connect</h4>
+        <p><a href="mailto:younghyunkim@sju.ac.kr">Email</a><br><a href="assets/CV_Younghyun_Kim.pdf">CV (PDF)</a><br><a href="https://www.instagram.com/yh.bioatelier/" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-note">© 2026 Young Hyun Kim. Built with plain HTML/CSS/JS — hosted on GitHub Pages.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
