@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function categoryMeta(cat) {
     if (typeof TRAVEL_CATEGORIES !== 'undefined' && TRAVEL_CATEGORIES[cat]) return TRAVEL_CATEGORIES[cat];
-    return { label: cat || 'Other', color: '#ff6b4a' };
+    return { label: cat || 'Other', color: '#cf4436' };
   }
 
   // Equirectangular projection — matches the projection used to generate the country paths.
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
     label.setAttribute('text-anchor', 'middle');
     label.setAttribute('font-size', '11');
     label.setAttribute('font-weight', '700');
-    label.setAttribute('fill', '#0a4f4f');
+    label.setAttribute('fill', '#22503f');
     label.textContent = pin.name;
 
     g.appendChild(halo);

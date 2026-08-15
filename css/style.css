@@ -4,26 +4,26 @@
    ============================================================ */
 
 :root {
-  --bg: #fbf7f0;
+  --bg: #eef2ea;
   --bg-alt: #ffffff;
-  --ink: #22282b;
-  --ink-soft: #55606a;
-  --ink-faint: #8b9298;
+  --ink: #1f2a24;
+  --ink-soft: #4b574f;
+  --ink-faint: #879089;
 
-  --primary: #0e6e6e;      /* deep teal — nav, headings, primary buttons */
-  --primary-dark: #0a4f4f;
-  --coral: #ff6b4a;        /* CTA / highlight */
-  --mustard: #f5b942;      /* badges, accents */
-  --magenta: #d6478c;      /* playful pop — blog/travel */
-  --sky: #4fa8d8;          /* links, secondary accent */
-  --mint: #bfe3da;         /* soft background tint */
+  --primary: #2f6d57;      /* deep teal — nav, headings, primary buttons */
+  --primary-dark: #22503f;
+  --coral: #cf4436;        /* CTA / highlight */
+  --mustard: #b5643a;      /* badges, accents */
+  --magenta: #bf5245;      /* playful pop — blog/travel */
+  --sky: #4f9080;          /* links, secondary accent */
+  --mint: #cfe3d5;         /* soft background tint */
 
   --radius-lg: 28px;
   --radius-md: 16px;
   --radius-sm: 10px;
   --shadow-soft: 0 10px 30px rgba(20, 40, 40, 0.08);
   --shadow-hover: 0 16px 40px rgba(20, 40, 40, 0.14);
-  --border-thin: 1px solid rgba(14, 110, 110, 0.14);
+  --border-thin: 1px solid rgba(47, 109, 87, 0.14);
 
   --max-width: 1100px;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Baloo 2', 'Inter', sans-serif;
+  font-family: 'Fraunces', 'Inter', sans-serif;
   color: var(--primary-dark);
   line-height: 1.15;
   margin: 0 0 0.5em;
@@ -94,7 +94,7 @@ section.tight { padding: 40px 0; }
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: 'Baloo 2', sans-serif;
+  font-family: 'Fraunces', sans-serif;
   font-weight: 700;
   font-size: 1.15rem;
   color: var(--primary-dark);
@@ -366,9 +366,9 @@ section.tight { padding: 40px 0; }
   margin: 0 6px 6px 0;
 }
 
-.tag.coral { background: #ffe1d6; color: #b8371a; }
-.tag.mustard { background: #fdf0d1; color: #8a5c07; }
-.tag.magenta { background: #f8dcec; color: #a3316b; }
+.tag.coral { background: #f6dcd6; color: #af392c; }
+.tag.mustard { background: #f3e6da; color: #6b3a1e; }
+.tag.magenta { background: #f2dcd7; color: #a5392c; }
 
 /* section headers */
 
@@ -388,7 +388,7 @@ section.tight { padding: 40px 0; }
   grid-template-columns: 160px 1fr;
   gap: 24px;
   padding: 24px 0;
-  border-bottom: 1px dashed rgba(14,110,110,0.2);
+  border-bottom: 1px dashed rgba(47,109,87,0.2);
 }
 
 .timeline-item:last-child { border-bottom: none; }
@@ -423,7 +423,7 @@ section.tight { padding: 40px 0; }
   border: none;
   text-align: left;
   cursor: pointer;
-  font-family: 'Baloo 2', sans-serif;
+  font-family: 'Fraunces', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--primary-dark);
@@ -434,7 +434,7 @@ section.tight { padding: 40px 0; }
   height: 34px;
   border-radius: 50%;
   background: var(--mustard);
-  color: #5c3d00;
+  color: #5c2f18;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -475,7 +475,7 @@ section.tight { padding: 40px 0; }
   border-radius: 999px;
   background: var(--mint);
   color: var(--primary-dark);
-  border: 1px solid rgba(14, 110, 110, 0.16);
+  border: 1px solid rgba(47, 109, 87, 0.16);
   font-weight: 700;
   font-size: 0.82rem;
   line-height: 1.2;
@@ -555,7 +555,7 @@ section.tight { padding: 40px 0; }
 }
 .milestone .yr {
   display: block;
-  font-family: 'Baloo 2', sans-serif;
+  font-family: 'Fraunces', sans-serif;
   font-weight: 800;
   font-size: 1.1rem;
   color: var(--primary-dark);
@@ -585,7 +585,7 @@ section.tight { padding: 40px 0; }
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-family: 'Baloo 2', sans-serif;
+  font-family: 'Fraunces', sans-serif;
   font-size: 1.05rem;
 }
 
@@ -597,7 +597,7 @@ section.tight { padding: 40px 0; }
 .protocol-card {
   background: var(--bg-alt);
   border-radius: var(--radius-md);
-  border: 2px dashed rgba(14,110,110,0.25);
+  border: 2px dashed rgba(47,109,87,0.25);
   padding: 24px;
 }
 
@@ -700,7 +700,7 @@ section.tight { padding: 40px 0; }
 #travel-map {
   width: 100%;
   height: auto;
-  background: #eaf4f2;
+  background: #e9f0ea;
   border-radius: var(--radius-lg);
   border: var(--border-thin);
   box-shadow: var(--shadow-soft);
