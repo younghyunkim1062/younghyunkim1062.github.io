@@ -15,6 +15,7 @@ publications.html      Publications + conference presentations
 blog.html              Blog landing
 blog-travel.html       Blog > Travel (interactive map)
 blog-making.html       Blog > Making (robotics/education projects)
+blog-gallery.html      Blog > Under the Scope (no-caption photo/video gallery)
 css/style.css          All styling (colors, fonts, layout)
 js/main.js             Mobile nav + accordion behavior (shared across pages)
 js/travel-data.js      Travel pin data — edit this to add trips
@@ -44,6 +45,13 @@ assets/img/            Images (favicon included; add your own photos here)
   `TRAVEL_CATEGORIES` and a matching filter button appears with no other changes needed.
 - **Making projects**: `blog-making.html` has 3 placeholder cards — copy/edit the
   `.card.post-card` blocks with your own robotics-education project photos and write-ups.
+- **Under the Scope**: `blog-gallery.html` is a deliberately light, no-explanation photo/video
+  gallery (`.scope-grid` of `.scope-item` tiles) — organoid footage, interesting microscope
+  captures, etc. Replace a `.scope-placeholder` div with `<img src="assets/img/scope/...">` for a
+  photo, or `<video src="..." muted loop autoplay playsinline>` for a short clip (keep clips light —
+  a few seconds, compressed). Keep the `.video-badge` play icon on video tiles, drop it for stills.
+  Captions (`.scope-caption`) are one line only, on purpose — this page is meant to be scanned, not
+  read. Add `.wide` to a `.scope-item` for a 16:10 tile instead of square.
 - **Grad-school guide** (`grad-school.html`, titled "From Bench to Paper"): a self-study roadmap
   built as **shared Foundations → two tracks**. An inline SVG "fork" diagram at the top shows the
   split; below it are three `.accordion` groups, each preceded by a `.track-group-head`:

@@ -736,6 +736,77 @@ section.tight { padding: 40px 0; }
 
 #travel-detail.visible { display: block; }
 
+/* ---------------- Under the Scope (photo/video gallery) ---------------- */
+
+.scope-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .scope-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .scope-grid { grid-template-columns: 1fr; }
+}
+
+.scope-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-alt);
+  border: var(--border-thin);
+}
+
+.scope-item.wide { aspect-ratio: 16/10; }
+
+.scope-item img,
+.scope-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.scope-item .scope-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-faint);
+  background: linear-gradient(135deg, var(--mint), var(--sky));
+}
+
+.scope-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px 8px;
+  background: linear-gradient(transparent, rgba(20, 30, 24, 0.72));
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.scope-item .video-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(20, 30, 24, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ---------------- Footer ---------------- */
 
 .site-footer {
