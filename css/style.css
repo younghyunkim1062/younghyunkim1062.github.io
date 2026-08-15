@@ -12,9 +12,9 @@
 
   --primary: #2f6d57;      /* deep teal — nav, headings, primary buttons */
   --primary-dark: #22503f;
-  --coral: #A51C30;        /* CTA / highlight */
-  --mustard: #A33B2E;      /* badges, accents */
-  --magenta: #8C2332;      /* playful pop — blog/travel */
+  --coral: #C9862B;        /* CTA / highlight */
+  --mustard: #D9954A;      /* badges, accents */
+  --magenta: #A6661D;      /* playful pop — blog/travel */
   --sky: #4f9080;          /* links, secondary accent */
   --mint: #cfe3d5;         /* soft background tint */
 
@@ -366,9 +366,9 @@ section.tight { padding: 40px 0; }
   margin: 0 6px 6px 0;
 }
 
-.tag.coral { background: #F5DEE0; color: #7A1425; }
-.tag.mustard { background: #F1E2E0; color: #5C1A16; }
-.tag.magenta { background: #F3DFE1; color: #7A1425; }
+.tag.coral { background: #F6E9D8; color: #6B4419; }
+.tag.mustard { background: #F3E4CC; color: #5C3A0F; }
+.tag.magenta { background: #F5E8D6; color: #6B4419; }
 
 /* section headers */
 
@@ -434,7 +434,7 @@ section.tight { padding: 40px 0; }
   height: 34px;
   border-radius: 50%;
   background: var(--mustard);
-  color: #5C1A16;
+  color: #5C3A0F;
   display: flex;
   align-items: center;
   justify-content: center;
