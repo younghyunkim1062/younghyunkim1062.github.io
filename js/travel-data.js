@@ -10,9 +10,9 @@
 
 var TRAVEL_CATEGORIES = {
   home:     { label: "Home base",        color: "#2f6d57" },
-  exchange: { label: "Exchange program", color: "#cf4436" },
-  business: { label: "Business trip",    color: "#bf5245" },
-  personal: { label: "Personal travel",  color: "#b5643a" }
+  exchange: { label: "Exchange program", color: "#A51C30" },
+  business: { label: "Business trip",    color: "#8C2332" },
+  personal: { label: "Personal travel",  color: "#A33B2E" }
 };
 
 var TRAVEL_PINS = [

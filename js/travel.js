@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function categoryMeta(cat) {
     if (typeof TRAVEL_CATEGORIES !== 'undefined' && TRAVEL_CATEGORIES[cat]) return TRAVEL_CATEGORIES[cat];
-    return { label: cat || 'Other', color: '#cf4436' };
+    return { label: cat || 'Other', color: '#A51C30' };
   }
 
   // Equirectangular projection — matches the projection used to generate the country paths.
