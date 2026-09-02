@@ -70,6 +70,19 @@ files) and add an `active` class only on the page it points to.
   a few seconds, compressed). Keep the `.video-badge` play icon on video tiles, drop it for stills.
   Captions (`.scope-caption`) are one line only, on purpose — this page is meant to be scanned, not
   read. Add `.wide` to a `.scope-item` for a 16:10 tile instead of square.
+- **Lightbox / illustration gallery** (`.illus-grid` of `.illus-item`, used on `about.html`'s
+  "Scientific Illustration" section and `figures.html`'s `#fig-2026` card): a `<button class="illus-item"
+  data-full="..." data-caption="...">` with an `.illus-thumb > img` (a small, fast-loading thumbnail)
+  opens `assets/CV`-style full-resolution image in a full-screen lightbox on click — the logic lives
+  in `js/main.js` and needs a `<div id="lightbox">...</div>` block (copy it from `about.html`, right
+  before `<script src="js/main.js">`) present on any page that uses `.illus-item`. A placeholder
+  gallery tile (nothing to click yet) should be a plain `<div class="illus-item" style="cursor:default;">`
+  with no `data-full`, not a `<button>`.
+- **Figures**: large source files (e.g. hand-drawn schematics exported from Inkscape) go in
+  `assets/img/figures/` alongside a pre-cropped, web-sized PNG thumbnail (keep the big source out of
+  `.illus-thumb img` — only reference it via `data-full` for the lightbox, so the page itself stays
+  light). `assets/img/figures/figure7-applications.svg` + `fig-readouts-thumb.png` is the first
+  example of this pair.
 - **Grad-school guide** (`grad-school.html`, titled "From Bench to Paper"): a self-study roadmap
   built as **shared Foundations → two tracks**. An inline SVG "fork" diagram at the top shows the
   split; below it are three `.accordion` groups, each preceded by a `.track-group-head`:

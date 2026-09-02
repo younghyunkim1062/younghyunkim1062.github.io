@@ -35,4 +35,36 @@ document.addEventListener('DOMContentLoaded', function () {
   // Open first accordion item by default
   var first = document.querySelector('.accordion-item');
   if (first) first.classList.add('open');
+
+  // Lightbox — click any .illus-item to view its full-resolution image.
+  // Markup: <button class="illus-item" data-full="path/to/full.png" data-caption="...">
+  var lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    var lightboxImg = lightbox.querySelector('img');
+    var lightboxCaption = lightbox.querySelector('.lightbox-caption');
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxCaption.textContent = caption || '';
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.illus-item').forEach(function (el) {
+      el.addEventListener('click', function () {
+        openLightbox(el.dataset.full, el.dataset.caption);
+      });
+    });
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox || e.target.classList.contains('lightbox-close')) closeLightbox();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  }
 });
