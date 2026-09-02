@@ -641,6 +641,35 @@ section.tight { padding: 40px 0; }
   margin-bottom: 2px;
 }
 
+.milestone .chapter {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 1.03rem;
+  margin: 0 0 6px;
+}
+
+.milestone-photo {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 4/3;
+  margin-top: 12px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--mint), var(--sky));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.78rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.milestone .tagline {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 6px;
+}
+
 /* ---------------- Publications ---------------- */
 
 .pub-item {

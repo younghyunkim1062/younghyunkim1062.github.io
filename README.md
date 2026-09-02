@@ -6,8 +6,8 @@ Plain HTML/CSS/JS, no build step. Every page is a standalone `.html` file that s
 ## Structure
 
 ```
-index.html            Main Page (hero, research summary, featured pub, year timeline, blog teaser)
-grad-school.html       How to Start Graduate School (accordion guide)
+index.html            Main Page (hero video, research summary, featured pub, path teaser, blog teaser)
+about.html             About (path narrative: maker -> international -> tissue engineer -> quant bioengineer)
 research.html          Research overview + experience timeline
 protocols.html         Research > Protocols (teaser cards, contact for full protocol)
 figures.html           Research > Figures & Illustration (paper-figure portfolio)
@@ -16,20 +16,38 @@ blog.html              Blog landing
 blog-travel.html       Blog > Travel (interactive map)
 blog-making.html       Blog > Making (robotics/education projects)
 blog-gallery.html      Blog > Under the Scope (no-caption photo/video gallery)
+grad-school.html       Blog > Grad School Notes, "From Bench to Paper" (self-study roadmap)
 css/style.css          All styling (colors, fonts, layout)
 js/main.js             Mobile nav + accordion behavior (shared across pages)
 js/travel-data.js      Travel pin data — edit this to add trips
 js/travel.js           Renders pins from travel-data.js onto the map SVG
 assets/img/            Images (favicon included; add your own photos here)
+assets/video/          Hero organoid clip (heart-organoid.webm/.mp4)
+assets/CV_Younghyun_Kim.pdf   The actual CV, linked from every "Download CV" / nav "CV" link
 ```
+
+### Nav structure
+
+`Home | Research (Overview/Protocols/Figures & Illustration) | Publications | About | Blog (Overview/Travel/Making/Under the Scope/Grad School Notes) | CV`
+
+`About` and `CV` are flat links (no dropdown) — About is a full page, CV opens the PDF in a new tab.
+`Grad School Notes` lives only in the Blog dropdown + each Blog page's `.blog-subnav` pill row; it is
+not a top-level nav item. To add a new flat nav item, edit the `<ul class="nav-links">` block in
+every page (there's no shared include — this is plain HTML, so nav edits are find-and-replace across
+files) and add an `active` class only on the page it points to.
 
 ## Things to fill in before you publish
 
-- **Photo**: replace the "Add your photo here" box in `index.html` — save an image to
-  `assets/img/profile.jpg` and swap the placeholder `<div class="inner">` for
-  `<img src="assets/img/profile.jpg" alt="Young Hyun Kim">` (same `.inner` class/wrapper).
-- **CV**: export your CV as a PDF and save it as `assets/CV_Younghyun_Kim.pdf` (the "Download CV"
-  buttons already link there).
+- **Photo**: the profile-photo placeholder now lives in two places — the `about.html` hero
+  (`.hero-photo-frame`) and a small circular avatar above "Connect" in every footer
+  (`.footer-avatar`). Save an image to `assets/img/profile.jpg` and replace each `<div class="inner">`
+  placeholder with `<img src="assets/img/profile.jpg" alt="Young Hyun Kim">`.
+- **CV**: `assets/CV_Younghyun_Kim.pdf` is already the real CV — every "Download CV" button and the
+  nav's "CV" link point there. Replace that file (same filename) whenever you have a newer version;
+  no other changes needed.
+- **About page milestone photos**: `about.html`'s "The Road So Far" and "Before the Bench" sections
+  have several `.milestone-photo` / `.scope-placeholder` boxes (CreArtBot, BirdBrain Technologies,
+  France) — replace each with a real `<img>` once you have the photos.
 - **Contact links**: footer + hero buttons now use the real email (`younghyunkim@sju.ac.kr`) and
   Instagram (`@yh.bioatelier`). Google Scholar / LinkedIn / GitHub were removed for now since there's
   nothing to link yet — add them back into the footer `<p>` (same pattern as Email/Instagram) once
@@ -90,23 +108,17 @@ Then open `http://localhost:8080` in a browser.
 
 ## Deploy to GitHub Pages
 
-1. Create a new GitHub repo (e.g. `yourusername.github.io` for a root user site, or any name for
-   a project site).
-2. From this folder:
-   ```
-   git init
-   git add .
-   git commit -m "Initial portfolio site"
-   git branch -M main
-   git remote add origin https://github.com/yourusername/REPO_NAME.git
-   git push -u origin main
-   ```
-3. On GitHub: **Settings → Pages → Source → Deploy from branch → `main` / `/(root)`**.
-4. Your site will be live at:
-   - `https://yourusername.github.io/` (if the repo is named `yourusername.github.io`), or
-   - `https://yourusername.github.io/REPO_NAME/` (any other repo name).
-5. Optional custom domain: add a `CNAME` file with your domain, and point your domain's DNS to
-   GitHub Pages (GitHub's docs walk through the exact records).
+Already live at **https://younghyunkim1062.github.io** (repo:
+`github.com/younghyunkim1062/younghyunkim1062.github.io`, GitHub Pages serving from `main` / `/(root)`).
 
-After the first push, updating the live site is just: edit a file → `git add` → `git commit` →
-`git push`. GitHub Pages redeploys automatically within a minute or two.
+Updating the live site after any local edit is just:
+```
+git add .
+git commit -m "describe the change"
+git push
+```
+GitHub Pages redeploys automatically within a minute or two.
+
+Optional custom domain later: add a `CNAME` file with your domain, and point your domain's DNS to
+GitHub Pages (GitHub's docs walk through the exact records) — the repo name stays
+`younghyunkim1062.github.io` either way, only the domain in front of it changes.
