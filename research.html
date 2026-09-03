@@ -133,10 +133,42 @@
       </div>
     </div>
 
-    <!-- FIGURE PLACEHOLDER: once your advisor OKs it, save 1–2 safe method figures to assets/img/
-         (e.g. iCAMAnalyzer UI, fabrication schematic) and replace this box with <img> tags. -->
-    <div style="aspect-ratio:16/5; border:2px dashed rgba(47,109,87,0.28); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center; color:var(--ink-faint); text-align:center; padding:20px; margin-top:26px;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.3"/></svg> Add 1–2 <strong>safe method figures</strong> here — e.g. the iCAMAnalyzer interface and the organoid fabrication schematic. Keep novel quantitative result panels for the paper.
+    <h4 style="margin:32px 0 6px;">Visual overview</h4>
+    <p class="subtle" style="margin-bottom:16px;">Click any figure to view it full-resolution.</p>
+    <div class="illus-grid" style="grid-template-columns: repeat(2, 1fr);">
+
+      <div class="illus-item" style="cursor:default;">
+        <div class="illus-thumb" style="aspect-ratio:16/9;">📷 Add Figure A</div>
+        <div class="illus-caption">
+          <span class="label">Figure A — Building Chamber-Specific Cardiac Organoids</span>
+          <span class="desc">I can build the biological model.</span>
+        </div>
+      </div>
+
+      <div class="illus-item" style="cursor:default;">
+        <div class="illus-thumb" style="aspect-ratio:16/9;">📷 Add Figure B</div>
+        <div class="illus-caption">
+          <span class="label">Figure B — Chamber-Specific Ca²⁺ Phenotype</span>
+          <span class="desc">The models are functionally distinct, not just molecularly different.</span>
+        </div>
+      </div>
+
+      <div class="illus-item" style="cursor:default;">
+        <div class="illus-thumb" style="aspect-ratio:16/9;">📷 Add Figure C</div>
+        <div class="illus-caption">
+          <span class="label">Figure C — iCAMAnalyzer</span>
+          <span class="desc">Custom analysis platform integrating calcium kinetics, spatial activation, conduction, and contractility.</span>
+        </div>
+      </div>
+
+      <div class="illus-item" style="cursor:default;">
+        <div class="illus-thumb" style="aspect-ratio:16/9;">📷 Add Figure D</div>
+        <div class="illus-caption">
+          <span class="label">Figure D — Scalable Multi-Organoid Analysis</span>
+          <span class="desc">From a single custom tool to a scalable research platform — nine organoids, analyzed simultaneously.</span>
+        </div>
+      </div>
+
     </div>
 
     <div class="btn-row" style="margin-top:22px;">
@@ -260,6 +292,14 @@
     <div class="footer-note">© 2026 Young Hyun Kim. Built with plain HTML/CSS/JS — hosted on GitHub Pages.</div>
   </div>
 </footer>
+
+<div id="lightbox">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <div style="display:flex; flex-direction:column; align-items:center;">
+    <img src="" alt="">
+    <p class="lightbox-caption"></p>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>

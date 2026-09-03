@@ -83,6 +83,13 @@ files) and add an `active` class only on the page it points to.
   `.illus-thumb img` — only reference it via `data-full` for the lightbox, so the page itself stays
   light). `assets/img/figures/figure7-applications.svg` + `fig-readouts-thumb.png` is the first
   example of this pair.
+- **Research > "Visual overview"**: a 2-column `.illus-grid` (4 placeholder tiles — Figure A–D,
+  covering organoid fabrication, Ca²⁺ phenotype, iCAMAnalyzer, and multi-organoid scalability) sits
+  in the Master's Thesis section. Each placeholder is a plain `<div class="illus-item"
+  style="cursor:default;">`; once you have the real figure files, follow the same pattern as the
+  Scientific Illustration gallery above — save a full-res source + a cropped/resized PNG thumbnail
+  to `assets/img/figures/`, then swap the placeholder `<div>` for a `<button class="illus-item"
+  data-full="..." data-caption="...">`.
 - **Grad-school guide** (`grad-school.html`, titled "From Bench to Paper"): a self-study roadmap
   built as **shared Foundations → two tracks**. An inline SVG "fork" diagram at the top shows the
   split; below it are three `.accordion` groups, each preceded by a `.track-group-head`:
