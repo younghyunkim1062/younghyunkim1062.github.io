@@ -9,10 +9,10 @@
 // To add a new trip: copy an entry, fill in the fields, and add photos to assets/img/travel/.
 
 var TRAVEL_CATEGORIES = {
-  home:     { label: "Home base",        color: "#2f6d57" },
-  exchange: { label: "Exchange program", color: "#C9862B" },
-  business: { label: "Business trip",    color: "#A6661D" },
-  personal: { label: "Personal travel",  color: "#D9954A" }
+  home:     { label: "Home base",        color: "#2f6d57" },  /* primary teal */
+  exchange: { label: "Exchange program", color: "#8a7f52" },  /* muted olive */
+  business: { label: "Business trip",    color: "#a1573f" },  /* muted rust */
+  personal: { label: "Personal travel",  color: "#5c6f8a" }   /* muted slate blue */
 };
 
 var TRAVEL_PINS = [
