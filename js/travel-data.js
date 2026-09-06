@@ -49,12 +49,12 @@ var TRAVEL_PINS = [
   {
     id: "biochip-jeju",
     name: "Jeju, South Korea",
-    tag: "2025 한국바이오칩학회 추계학술대회 · Poster",
+    tag: "Korea BioChip Society Fall Conference · Poster",
     category: "business",
     lat: 33.4996,
     lon: 126.5312,
-    episode: "Presented a poster — \"Cardiac Organoid Platform with Micropillar-Assisted Calcium and Optical Signal Analysis\" — at the 2025 Korea BioChip Society Fall Conference (2025 한국바이오칩학회 추계학술대회), November 12–14, 2025.",
-    photos: []
+    episode: "Presented a poster — \"Cardiac Organoid Platform with Micropillar-Assisted Calcium and Optical Signal Analysis\" — at the 2025 Korea BioChip Society Fall Conference, November 12–14, 2025.",
+    photos: ["assets/img/travel/biochip-jeju-2025.jpg"]
   },
   {
     id: "example-personal",

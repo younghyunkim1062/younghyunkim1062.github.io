@@ -56,13 +56,16 @@ files) and add an `active` class only on the page it points to.
   `js/travel-data.js`, photo at `assets/img/travel/birdbrain-2018.jpg`. Many more CreArtBot
   photos/videos exist in that source folder (mostly HEIC/MOV, several projects per zip) if you want
   to swap in different ones later.
-- **Awards photo + conference posters (filled in)**: `assets/img/awards/2016-grand-prize.jpg` on
-  Publications' Awards entry (click to enlarge, via the shared lightbox). The Summer Symposium
-  poster PDF is still linked at `assets/posters/2025-symposium-poster.pdf` (~26MB→recompressed
-  posters should be rasterized at 150dpi with PyMuPDF; re-run that if you replace it with another
-  large poster). The Korea BioChip Society (Jeju) poster's PDF was removed — that entry now links
-  to the trip on `blog-travel.html` (pin id `biochip-jeju` in `js/travel-data.js`) instead; add a
-  real photo to `assets/img/travel/` and the pin's `photos` array once you have one.
+- **Awards**: moved off Publications (a 2016 undergrad award sat oddly next to peer-reviewed
+  output) to a one-line "Selected highlight" note on `about.html`'s Turning Points timeline, no
+  photo link. `assets/img/awards/2016-grand-prize.jpg` is unused now but still on disk if you want
+  to bring the photo back somewhere.
+- **Conference poster PDFs**: both `assets/posters/*.pdf` files were removed — neither entry links
+  to a PDF anymore. The Korea BioChip Society (Jeju) poster instead has a "View photo" lightbox
+  button pointing at `assets/img/travel/biochip-jeju-2025.jpg` (also used as that trip's photo in
+  `js/travel-data.js`, pin id `biochip-jeju`); the Summer Symposium entry is now text-only. If you
+  want a poster PDF linked again, add the file back under `assets/posters/` and link it the same
+  way the symposium entry used to (recompress large posters by rasterizing at 150dpi with PyMuPDF).
 - **Contact links**: footer + hero buttons now use the real email (`younghyunkim@sju.ac.kr`) and
   Instagram (`@yh.bioatelier`). Google Scholar / LinkedIn / GitHub were removed for now since there's
   nothing to link yet — add them back into the footer `<p>` (same pattern as Email/Instagram) once
