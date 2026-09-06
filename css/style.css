@@ -1066,6 +1066,131 @@ section.tight { padding: 32px 0; }
   padding-top: 20px;
 }
 
+/* ---------------- Research loop (Research page framework diagram) ---------------- */
+
+.research-loop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin: 8px 0 4px;
+  align-items: stretch;
+}
+
+.loop-stage {
+  position: relative;
+  padding: 20px 18px 22px;
+  border: var(--border-thin);
+  border-left: none;
+}
+
+.loop-stage:first-child { border-left: var(--border-thin); }
+
+.loop-stage.is-current { border-top: 2px solid var(--primary); }
+.loop-stage.is-future {
+  border-top: 2px dashed var(--ink-faint);
+  background: var(--mint);
+}
+
+.loop-stage .loop-num {
+  font-family: 'Fraunces', sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.loop-stage h4 { margin: 0 0 4px; font-size: 1rem; }
+.loop-stage .loop-sub { color: var(--ink-faint); font-size: 0.82rem; margin: 0 0 10px; }
+.loop-stage .loop-tags { color: var(--ink-soft); font-size: 0.8rem; line-height: 1.5; margin: 0; }
+
+.loop-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.loop-badge.current { background: var(--primary); color: #fff; }
+.loop-badge.future { background: none; border: 1px solid var(--ink-faint); color: var(--ink-faint); }
+
+.loop-arrow-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6px;
+  margin-top: -1px;
+  pointer-events: none;
+}
+
+.loop-arrow-row span {
+  transform: translateY(-50%);
+  color: var(--ink-faint);
+  font-size: 1rem;
+  background: var(--bg-alt);
+  width: 20px;
+  text-align: center;
+}
+
+.loop-back-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 860px) {
+  .research-loop { grid-template-columns: 1fr; }
+  .loop-stage { border-left: var(--border-thin) !important; border-top: var(--border-thin) !important; }
+  .loop-stage.is-current { border-left: 2px solid var(--primary) !important; }
+  .loop-stage.is-future { border-left: 2px dashed var(--ink-faint) !important; }
+  .loop-arrow-row { display: none; }
+}
+
+/* Excitation -> Ca2+ -> Contraction flow line */
+.ec-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-family: 'Fraunces', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin: 6px 0 30px;
+}
+
+.ec-flow .arrow { color: var(--ink-faint); font-weight: 400; }
+
+.measure-columns {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.measure-columns .divider-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: var(--ink-faint);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  align-self: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 780px) {
+  .measure-columns { grid-template-columns: 1fr; }
+  .measure-columns .divider-label { writing-mode: horizontal-tb; text-align: center; }
+}
+
 /* utility */
 .mb-0 { margin-bottom: 0 !important; }
 .text-center { text-align: center; }
