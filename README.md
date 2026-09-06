@@ -57,10 +57,12 @@ files) and add an `active` class only on the page it points to.
   photos/videos exist in that source folder (mostly HEIC/MOV, several projects per zip) if you want
   to swap in different ones later.
 - **Awards photo + conference posters (filled in)**: `assets/img/awards/2016-grand-prize.jpg` on
-  Publications' Awards entry (click to enlarge, via the shared lightbox); the two conference poster
-  PDFs are linked from their respective entries at `assets/posters/2025-biochip-poster.pdf` and
-  `assets/posters/2025-symposium-poster.pdf` (the BioChip one was ~26MB originally — recompressed by
-  rasterizing at 150dpi with PyMuPDF; re-run that if you replace it with another large poster).
+  Publications' Awards entry (click to enlarge, via the shared lightbox). The Summer Symposium
+  poster PDF is still linked at `assets/posters/2025-symposium-poster.pdf` (~26MB→recompressed
+  posters should be rasterized at 150dpi with PyMuPDF; re-run that if you replace it with another
+  large poster). The Korea BioChip Society (Jeju) poster's PDF was removed — that entry now links
+  to the trip on `blog-travel.html` (pin id `biochip-jeju` in `js/travel-data.js`) instead; add a
+  real photo to `assets/img/travel/` and the pin's `photos` array once you have one.
 - **Contact links**: footer + hero buttons now use the real email (`younghyunkim@sju.ac.kr`) and
   Instagram (`@yh.bioatelier`). Google Scholar / LinkedIn / GitHub were removed for now since there's
   nothing to link yet — add them back into the footer `<p>` (same pattern as Email/Instagram) once

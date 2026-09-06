@@ -47,6 +47,16 @@ var TRAVEL_PINS = [
     photos: ["assets/img/travel/birdbrain-2018.jpg"]
   },
   {
+    id: "biochip-jeju",
+    name: "Jeju, South Korea",
+    tag: "2025 한국바이오칩학회 추계학술대회 · Poster",
+    category: "business",
+    lat: 33.4996,
+    lon: 126.5312,
+    episode: "Presented a poster — \"Cardiac Organoid Platform with Micropillar-Assisted Calcium and Optical Signal Analysis\" — at the 2025 Korea BioChip Society Fall Conference (2025 한국바이오칩학회 추계학술대회), November 12–14, 2025.",
+    photos: []
+  },
+  {
     id: "example-personal",
     name: "Add your personal trip",
     tag: "Example pin — edit me",
