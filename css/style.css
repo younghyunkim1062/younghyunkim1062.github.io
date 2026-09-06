@@ -1102,7 +1102,7 @@ section.tight { padding: 32px 0; }
 
 .loop-stage h4 { margin: 0 0 4px; font-size: 1rem; }
 .loop-stage .loop-sub { color: var(--ink-faint); font-size: 0.82rem; margin: 0 0 10px; }
-.loop-stage .loop-tags { color: var(--ink-soft); font-size: 0.8rem; line-height: 1.5; margin: 0; }
+.loop-tags { color: var(--ink-soft); font-size: 0.8rem; line-height: 1.5; margin: 0; }
 
 .loop-badge {
   display: inline-block;
