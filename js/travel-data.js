@@ -37,14 +37,14 @@ var TRAVEL_PINS = [
     photos: []
   },
   {
-    id: "example-business",
-    name: "Add your business trip",
-    tag: "Example pin — edit me",
+    id: "birdbrain-pittsburgh",
+    name: "Pittsburgh, USA",
+    tag: "CreArtBot · BirdBrain Technologies",
     category: "business",
-    lat: 35.6762,
-    lon: 139.6503,
-    episode: "Placeholder (currently Tokyo) for a work/conference trip. Edit js/travel-data.js: update name/tag/episode, set lat/lon, and add photos to assets/img/travel/.",
-    photos: []
+    lat: 40.4406,
+    lon: -79.9959,
+    episode: "Visited BirdBrain Technologies for the Catalyze Learning Summer Institute — hands-on training with the team behind the Hummingbird robotics platform, and my first experience working directly with an international engineering and education community.",
+    photos: ["assets/img/travel/birdbrain-2018.jpg"]
   },
   {
     id: "example-personal",

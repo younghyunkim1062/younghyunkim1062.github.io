@@ -45,9 +45,22 @@ files) and add an `active` class only on the page it points to.
 - **CV**: `assets/CV_Younghyun_Kim.pdf` is already the real CV — every "Download CV" button and the
   nav's "CV" link point there. Replace that file (same filename) whenever you have a newer version;
   no other changes needed.
-- **About page milestone photos**: `about.html`'s "The Road So Far" and "Before the Bench" sections
-  have several `.milestone-photo` / `.scope-placeholder` boxes (CreArtBot, BirdBrain Technologies,
-  France) — replace each with a real `<img>` once you have the photos.
+- **About page milestone photos**: CreArtBot (video + 2 photos) and BirdBrain Technologies are filled
+  in (see below); France (`.milestone-photo` in Turning Points and the Beyond the Lab card) is still
+  a placeholder — replace it with a real `<img>` once you have a photo.
+- **CreArtBot content (filled in)**: sourced from `대학원/이력정리/CreArtBot/` — `assets/video/creartbot.mp4`
+  `.webm` (the 2017 project clip, silent/looping like the homepage organoid video) and
+  `assets/img/about/{creartbot-exhibition,birdbrain-workshop}.jpg` on `about.html`'s Before the Bench;
+  `assets/img/making/{carousel,commercialization,exhibition-snake}.jpg` as the 3 `blog-making.html`
+  cards; and a real "business trip" pin (Pittsburgh — BirdBrain Technologies) on the travel map in
+  `js/travel-data.js`, photo at `assets/img/travel/birdbrain-2018.jpg`. Many more CreArtBot
+  photos/videos exist in that source folder (mostly HEIC/MOV, several projects per zip) if you want
+  to swap in different ones later.
+- **Awards photo + conference posters (filled in)**: `assets/img/awards/2016-grand-prize.jpg` on
+  Publications' Awards entry (click to enlarge, via the shared lightbox); the two conference poster
+  PDFs are linked from their respective entries at `assets/posters/2025-biochip-poster.pdf` and
+  `assets/posters/2025-symposium-poster.pdf` (the BioChip one was ~26MB originally — recompressed by
+  rasterizing at 150dpi with PyMuPDF; re-run that if you replace it with another large poster).
 - **Contact links**: footer + hero buttons now use the real email (`younghyunkim@sju.ac.kr`) and
   Instagram (`@yh.bioatelier`). Google Scholar / LinkedIn / GitHub were removed for now since there's
   nothing to link yet — add them back into the footer `<p>` (same pattern as Email/Instagram) once
