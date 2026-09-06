@@ -1145,12 +1145,18 @@ section.tight { padding: 32px 0; }
 }
 
 @media (max-width: 860px) {
-  .research-loop { grid-template-columns: 1fr; }
+  .research-loop, .research-loop.cols-3 { grid-template-columns: 1fr; }
   .loop-stage { border-left: var(--border-thin) !important; border-top: var(--border-thin) !important; }
   .loop-stage.is-current { border-left: 2px solid var(--primary) !important; }
   .loop-stage.is-future { border-left: 2px dashed var(--ink-faint) !important; }
   .loop-arrow-row { display: none; }
 }
+
+/* Neutral 3-step narrative flow (Future Research Focus diagram) — reuses .loop-stage's
+   box but without the current/future color-coding, since these are pipeline stages,
+   not a timeline. */
+.research-loop.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.loop-arrow-row.cols-3 { justify-content: space-evenly; }
 
 /* Divider marking the switch from completed M.S. work to Ph.D. future direction */
 .phd-divider {
