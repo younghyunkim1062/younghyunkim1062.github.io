@@ -1152,6 +1152,51 @@ section.tight { padding: 32px 0; }
   .loop-arrow-row { display: none; }
 }
 
+/* Divider marking the switch from completed M.S. work to Ph.D. future direction */
+.phd-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.phd-divider::before, .phd-divider::after {
+  content: '';
+  flex: 1;
+  border-top: 2px dashed var(--ink-faint);
+}
+
+.phd-divider span {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.future-zone { background: var(--mint); }
+
+/* Compact skill pills (replaces long CV-style skill cards on Research page) */
+.skill-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+
+.skill-pill {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: var(--border-thin);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.card.future-card {
+  border: 1px dashed var(--ink-faint);
+  background: var(--bg-alt);
+}
+
 /* Excitation -> Ca2+ -> Contraction flow line */
 .ec-flow {
   display: flex;
