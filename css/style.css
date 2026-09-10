@@ -970,6 +970,10 @@ section.tight { padding: 32px 0; }
   display: block;
 }
 
+/* For dense publication figures — show the whole figure, not a crop */
+.illus-thumb.contain { background: #fff; padding: 8px; }
+.illus-thumb.contain img { object-fit: contain; object-position: center; }
+
 .illus-item .illus-caption {
   padding: 14px 16px;
 }
@@ -1038,6 +1042,25 @@ section.tight { padding: 32px 0; }
 }
 
 .lightbox-close:hover { background: rgba(255,255,255,0.25); }
+
+/* Inline text button that opens the lightbox (award / figure "View ..." links).
+   Also carries .illus-item on the element so the older cached main.js still binds it. */
+.link-btn {
+  display: inline !important;
+  width: auto !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  overflow: visible !important;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  color: var(--primary);
+}
+.link-btn:hover { color: var(--primary-dark); text-decoration: underline; transform: none !important; }
 
 /* ---------------- Footer ---------------- */
 

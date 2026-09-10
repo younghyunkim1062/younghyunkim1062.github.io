@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var first = document.querySelector('.accordion-item');
   if (first) first.classList.add('open');
 
-  // Lightbox — click any .illus-item to view its full-resolution image.
-  // Markup: <button class="illus-item" data-full="path/to/full.png" data-caption="...">
+  // Lightbox — click any .illus-item (or inline .link-btn) with data-full to view its
+  // full-resolution image. Markup: <button class="illus-item" data-full="..." data-caption="...">
   var lightbox = document.getElementById('lightbox');
   if (lightbox) {
     var lightboxImg = lightbox.querySelector('img');
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.style.overflow = '';
     }
 
-    document.querySelectorAll('.illus-item').forEach(function (el) {
+    document.querySelectorAll('.illus-item[data-full], .link-btn[data-full]').forEach(function (el) {
       el.addEventListener('click', function () {
         openLightbox(el.dataset.full, el.dataset.caption);
       });

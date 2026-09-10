@@ -88,19 +88,24 @@ files) and add an `active` class only on the page it points to.
   a few seconds, compressed). Keep the `.video-badge` play icon on video tiles, drop it for stills.
   Captions (`.scope-caption`) are one line only, on purpose — this page is meant to be scanned, not
   read. Add `.wide` to a `.scope-item` for a 16:10 tile instead of square.
-- **Lightbox / illustration gallery** (`.illus-grid` of `.illus-item`, used on `about.html`'s
-  "Scientific Illustration" section and `figures.html`'s `#fig-2026` card): a `<button class="illus-item"
-  data-full="..." data-caption="...">` with an `.illus-thumb > img` (a small, fast-loading thumbnail)
-  opens `assets/CV`-style full-resolution image in a full-screen lightbox on click — the logic lives
-  in `js/main.js` and needs a `<div id="lightbox">...</div>` block (copy it from `about.html`, right
-  before `<script src="js/main.js">`) present on any page that uses `.illus-item`. A placeholder
-  gallery tile (nothing to click yet) should be a plain `<div class="illus-item" style="cursor:default;">`
-  with no `data-full`, not a `<button>`.
-- **Figures**: large source files (e.g. hand-drawn schematics exported from Inkscape) go in
-  `assets/img/figures/` alongside a pre-cropped, web-sized PNG thumbnail (keep the big source out of
-  `.illus-thumb img` — only reference it via `data-full` for the lightbox, so the page itself stays
-  light). `assets/img/figures/figure7-applications.svg` + `fig-readouts-thumb.png` is the first
-  example of this pair.
+- **Lightbox / illustration gallery** (`.illus-grid` of `.illus-item`, used on `figures.html` and
+  `publications.html`'s `#pub-illustration` section): a `<button class="illus-item" data-full="..."
+  data-caption="...">` with an `.illus-thumb > img` (a small, fast-loading thumbnail) opens the
+  full-resolution image in a full-screen lightbox on click — the logic lives in `js/main.js`
+  (`.illus-item[data-full], .link-btn[data-full]`) and needs a `<div id="lightbox">...</div>` block
+  before `<script src="js/main.js">` on any page that uses it. An inline text button ("View full
+  figure →") uses `class="illus-item link-btn"` — the `link-btn` styles strip the card chrome, and
+  keeping `illus-item` on it means a stale cached `main.js` still binds it. A placeholder tile
+  (nothing to click yet) is a plain `<div class="illus-item" style="cursor:default;">` with no
+  `data-full`. Dense publication figures use `class="illus-thumb contain"` so the whole figure
+  shows on a white background instead of a `cover` crop.
+- **Figures**: large source files go in `assets/img/figures/` alongside a web-sized thumbnail
+  (`-thumb.jpg`, ~640-700px) and a capped full-res (`-full.jpg`, ~1600-2000px). Reference the thumb
+  in `.illus-thumb img` and the full in `data-full`. `figures.html` currently shows three real
+  first-author review figures (Microsystems & Nanoengineering, 2026): `graphical-abstract`,
+  `heart-organization` (Figure 1), and `figure7-applications.svg` + `fig-readouts-thumb.png`
+  (Figure 7). Source figures were in `대학원/이력정리/Microsystems&nanoengineering/`. No npj Robotics
+  figure is on the site — the folder for it was empty; the page notes the credit and links the paper.
 - **Research > "Visual overview"**: a 2-column `.illus-grid` (4 placeholder tiles — Figure A–D,
   covering organoid fabrication, Ca²⁺ phenotype, iCAMAnalyzer, and multi-organoid scalability) sits
   in the Master's Thesis section. Each placeholder is a plain `<div class="illus-item"
@@ -121,17 +126,14 @@ files) and add an `active` class only on the page it points to.
   you edit the fork diagram's labels, update the matching track headers so they stay in sync.
 - **Protocols**: `protocols.html` currently only shows public summaries + "request full protocol."
   If you'd rather make some protocols fully public (or sell them), edit that page directly.
-- **Figures & Illustration**: `figures.html` has 3 placeholder cards — one per publication
-  (`#fig-2026`, `#fig-2025`) plus one for the iCAMAnalyzer interface. Swap the `.thumb` gradient
-  placeholders for `<img>` tags pointing to real figure images, and fill in the "Tools & Approach"
-  cards at the bottom (software you use, how you approach a figure). Each publication card links to
-  its full citation on `publications.html`, and each publication entry links back with "→ See the
-  figure design" — both use matching `id` anchors (`#pub-2026`/`#fig-2026`, etc.), so keep the pair
-  in sync if you rename or add publications. This page is deliberately positioned as a demonstrated
-  research skill (tied to your real publications) rather than a commercial pitch — if you start
-  taking paid figure commissions later, add that as a section on this same page rather than a new tab.
-  (The iCAMAnalyzer card only shows a screenshot/diagram — it doesn't require the source code to be
-  public.)
+- **Figures & Illustration** (`figures.html`, titled "Scientific Illustration & Visual
+  Communication"): positioned as a demonstrated skill (structuring a concept → composition → final
+  artwork), not a commercial pitch. Three real first-author review figures + a one-line note that
+  the npj Robotics schematics are credited but not shown. A compact "Process / Tools" line sits
+  under the grid (no separate stats cards). `publications.html`'s `#pub-illustration` section
+  mirrors the same three thumbnails as a teaser and links here. To add the missing npj Robotics
+  figure later, drop a `-thumb.jpg`/`-full` pair in `assets/img/figures/` and add a fourth card
+  following the same pattern.
 
 ## Preview locally
 
