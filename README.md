@@ -16,7 +16,7 @@ blog.html              Blog landing
 blog-travel.html       Blog > Travel (interactive map)
 blog-making.html       Blog > Making (robotics/education projects)
 blog-gallery.html      Blog > Under the Scope (no-caption photo/video gallery)
-grad-school.html       Blog > Grad School Notes, "From Bench to Paper" (self-study roadmap)
+research-starter-kit.html   Blog > Research Starter Kit (practical research notes for students)
 css/style.css          All styling (colors, fonts, layout)
 js/main.js             Mobile nav + accordion behavior (shared across pages)
 js/travel-data.js      Travel pin data — edit this to add trips
@@ -28,10 +28,10 @@ assets/CV_Younghyun_Kim.pdf   The actual CV, linked from every "Download CV" / n
 
 ### Nav structure
 
-`Home | Research (Overview/Protocols/Figures & Illustration) | Publications | About | Blog (Overview/Travel/Making/Under the Scope/Grad School Notes) | CV`
+`Home | Research (Overview/Protocols/Figures & Illustration) | Publications | About | Blog (Overview/Travel/Making/Under the Scope/Research Starter Kit) | CV`
 
 `About` and `CV` are flat links (no dropdown) — About is a full page, CV opens the PDF in a new tab.
-`Grad School Notes` lives only in the Blog dropdown + each Blog page's `.blog-subnav` pill row; it is
+`Research Starter Kit` lives only in the Blog dropdown + each Blog page's `.blog-subnav` pill row (and a card on `blog.html`); it is
 not a top-level nav item. To add a new flat nav item, edit the `<ul class="nav-links">` block in
 every page (there's no shared include — this is plain HTML, so nav edits are find-and-replace across
 files) and add an `active` class only on the page it points to.
@@ -113,17 +113,17 @@ files) and add an `active` class only on the page it points to.
   Scientific Illustration gallery above — save a full-res source + a cropped/resized PNG thumbnail
   to `assets/img/figures/`, then swap the placeholder `<div>` for a `<button class="illus-item"
   data-full="..." data-caption="...">`.
-- **Grad-school guide** (`grad-school.html`, titled "From Bench to Paper"): a self-study roadmap
-  built as **shared Foundations → two tracks**. An inline SVG "fork" diagram at the top shows the
-  split; below it are three `.accordion` groups, each preceded by a `.track-group-head`:
-  Foundations (mustard step numbers), **Track A — Experimental research → thesis** (teal step
-  numbers, `.step-num.track-a`), and **Track B — Review & synthesis → paper** (coral step numbers,
-  `.step-num.track-b`). Track A/B steps are anchored to your real work and cross-link to
-  Research / Figures / Publications. To add a study link, copy an
-  `<a class="resource-link" ...><span class="arrow">↗</span> Label</a>` chip; to add a step, copy a
-  `.accordion-item` inside the relevant track's `.accordion`. The "programs you'll live in" tool
-  grid (ImageJ / Inkscape / Prism, each a `.card` with a `.tool-icon` SVG) sits at the bottom. If
-  you edit the fork diagram's labels, update the matching track headers so they stay in sync.
+- **Research Starter Kit** (`research-starter-kit.html`): an article-hub-style page of practical
+  research notes, framed as "things I wish I'd known on day one" — deliberately not a "how to get
+  into grad school" guide. Four numbered sections (01 Start the Experiment / 02 Read & Synthesize /
+  03 Analyze & Visualize / 04 Write & Communicate), each with an intro, a short bullet checklist, a
+  `Topics:` line (`.loop-tags`), and a "Notes I plan to share" list (`.note-list` / `.note-item` —
+  bold title + one-line description). Then a "Tools I Actually Use" section (4 grouped `.loop-tags`
+  cards), a "First Notes" placeholder grid (`.card`s with a "Coming soon" span — swap for real
+  links as posts go up), a "Why I Made This Page" closing note, and a footer CTA with jump-pills
+  (`a.skill-pill` anchored to `#start` / `#read` / `#analyze` / `#write`). Reachable only from the
+  Blog dropdown, the `.blog-subnav` row, and a card on `blog.html` — kept off the top nav on
+  purpose. (Renamed from the old `grad-school.html` / "From Bench to Paper" roadmap.)
 - **Protocols**: `protocols.html` currently only shows public summaries + "request full protocol."
   If you'd rather make some protocols fully public (or sell them), edit that page directly.
 - **Figures & Illustration** (`figures.html`, titled "Scientific Illustration & Visual

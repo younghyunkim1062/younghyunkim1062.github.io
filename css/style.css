@@ -482,132 +482,6 @@ section.tight { padding: 32px 0; }
   .timeline-item { grid-template-columns: 1fr; gap: 6px; }
 }
 
-/* ---------------- Accordion (grad school guide) ---------------- */
-
-.accordion-item {
-  background: var(--bg-alt);
-  border-radius: var(--radius-md);
-  border: var(--border-thin);
-  margin-bottom: 16px;
-  overflow: hidden;
-}
-
-.accordion-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  padding: 20px 24px;
-  background: none;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  font-family: 'Fraunces', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--primary-dark);
-}
-
-.accordion-header .step-num {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--mustard);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.95rem;
-  flex-shrink: 0;
-}
-
-.accordion-header .chev {
-  margin-left: auto;
-  transition: transform 0.2s ease;
-  color: var(--ink-faint);
-}
-
-.accordion-item.open .chev { transform: rotate(180deg); }
-
-.accordion-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.25s ease;
-  padding: 0 24px;
-}
-
-.accordion-item.open .accordion-body {
-  max-height: 2000px;
-  padding: 0 24px 24px;
-}
-
-.accordion-body ul { margin: 0; padding-left: 20px; }
-.accordion-body li { margin-bottom: 12px; color: var(--ink-soft); }
-
-/* Resource link chips (study links / pro-tips) */
-.resource-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin: 6px 8px 2px 0;
-  padding: 5px 13px;
-  border-radius: 999px;
-  background: var(--mint);
-  color: var(--primary-dark);
-  border: 1px solid rgba(47, 109, 87, 0.16);
-  font-weight: 700;
-  font-size: 0.82rem;
-  line-height: 1.2;
-  text-decoration: none;
-}
-
-.resource-link:hover {
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
-}
-
-.resource-link .arrow { font-weight: 800; }
-
-.tip-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--coral);
-  margin: 4px 0 6px;
-}
-
-/* Tool / program icon tiles */
-.tool-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 14px;
-}
-
-/* Track color-coding on accordion step numbers */
-.step-num.track-a { background: var(--primary); color: #fff; }
-.step-num.track-b { background: var(--coral); color: #fff; }
-
-/* Track group headers */
-.track-group-head { margin: 44px 0 18px; }
-.track-group-head:first-of-type { margin-top: 8px; }
-.track-group-head .eyebrow { margin-bottom: 10px; }
-.track-group-head h3 { margin: 0; font-size: 1.4rem; }
-.track-group-head p { margin: 6px 0 0; }
-
-/* Fork diagram */
-.fork-diagram { margin: 30px 0 6px; overflow-x: auto; }
-.fork-diagram svg { max-width: 640px; width: 100%; height: auto; display: block; margin: 0 auto; }
-.fork-caption { text-align: center; color: var(--ink-faint); font-size: 0.9rem; margin: 8px 0 0; }
-
 /* Milestone timeline (main page) */
 .milestones { position: relative; max-width: 780px; margin-top: 4px; }
 .milestones::before {
@@ -1220,6 +1094,15 @@ section.tight { padding: 32px 0; }
   font-weight: 600;
   color: var(--ink-soft);
 }
+
+a.skill-pill { transition: border-color 0.15s ease, color 0.15s ease; }
+a.skill-pill:hover { border-color: var(--primary); color: var(--primary); }
+
+/* Research Starter Kit — "Notes I plan to share" / "Tools I use" lists */
+.note-list { border-top: var(--border-thin); margin-top: 8px; max-width: 760px; }
+.note-item { padding: 15px 0; border-bottom: var(--border-thin); }
+.note-item strong { display: block; color: var(--ink); font-size: 0.97rem; margin-bottom: 3px; }
+.note-item p { margin: 0; font-size: 0.92rem; }
 
 .card.future-card {
   border: 1px dashed var(--ink-faint);

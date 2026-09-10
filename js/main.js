@@ -1,4 +1,4 @@
-// Shared site behavior: mobile nav toggle + accordion (used on grad-school page)
+// Shared site behavior: mobile nav toggle + dropdown + lightbox
 
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.querySelector('.nav-toggle');
@@ -19,22 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-
-  // Accordion (How to Start Graduate School page)
-  document.querySelectorAll('.accordion-header').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var item = btn.closest('.accordion-item');
-      var wasOpen = item.classList.contains('open');
-      item.parentElement.querySelectorAll('.accordion-item').forEach(function (i) {
-        i.classList.remove('open');
-      });
-      if (!wasOpen) item.classList.add('open');
-    });
-  });
-
-  // Open first accordion item by default
-  var first = document.querySelector('.accordion-item');
-  if (first) first.classList.add('open');
 
   // Lightbox — click any .illus-item (or inline .link-btn) with data-full to view its
   // full-resolution image. Markup: <button class="illus-item" data-full="..." data-caption="...">

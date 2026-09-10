@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Starter Kit — Young Hyun Kim</title>
+<meta name="description" content="Practical notes for starting experimental research — organizing experiments, reading papers, analyzing data, building figures, and communicating results.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="badge"><span>YK</span></span>Young Hyun Kim</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li class="has-dropdown">
+        <a href="research.html" class="nav-link">Research</a>
+        <div class="dropdown"><a href="research.html">Overview</a><a href="protocols.html">Protocols</a><a href="figures.html">Figures &amp; Illustration</a></div>
+      </li>
+      <li><a href="publications.html" class="nav-link">Publications</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li class="has-dropdown">
+        <a href="blog.html" class="nav-link">Blog</a>
+        <div class="dropdown"><a href="blog.html">Overview</a><a href="blog-travel.html">Travel</a><a href="blog-making.html">Making</a><a href="blog-gallery.html">Under the Scope</a><a href="research-starter-kit.html" class="active">Research Starter Kit</a></div>
+      </li>
+      <li><a href="assets/CV_Younghyun_Kim.pdf" class="nav-link" target="_blank" rel="noopener">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="tight">
+  <div class="container">
+    <span class="eyebrow">For students starting research</span>
+    <h1>Research Starter Kit</h1>
+    <p style="font-size:1.15rem; font-weight:600; color:var(--primary-dark); margin-bottom:16px;">Practical notes for starting experimental research</p>
+    <p style="font-size:1.05rem; max-width:720px;">
+      Research is full of things that are rarely taught explicitly: how to organize an experiment,
+      what to record, how to troubleshoot failed protocols, how to turn raw data into a figure, and
+      how to communicate results clearly.
+    </p>
+    <p style="max-width:720px;">
+      I built this page as a collection of practical notes I wish I had when I first started working
+      in a lab.
+    </p>
+
+    <div class="blog-subnav">
+      <a href="blog.html">All</a>
+      <a href="blog-travel.html">Travel</a>
+      <a href="blog-making.html">Making</a>
+      <a href="blog-gallery.html">Under the Scope</a>
+      <a href="research-starter-kit.html" class="active">Research Starter Kit</a>
+    </div>
+
+    <div class="skill-pills" style="margin-top:24px;">
+      <a href="#start" class="skill-pill">01 · Start the Experiment</a>
+      <a href="#read" class="skill-pill">02 · Read &amp; Synthesize</a>
+      <a href="#analyze" class="skill-pill">03 · Analyze &amp; Visualize</a>
+      <a href="#write" class="skill-pill">04 · Write &amp; Communicate</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 01 — START THE EXPERIMENT ============ -->
+<section class="bg-tint tight" id="start">
+  <div class="container">
+    <span class="eyebrow">01 · Start the Experiment</span>
+    <h2>Start with a system you can understand</h2>
+    <p style="max-width:720px;">Good experiments are easier to interpret when the variables, controls,
+      and expected outcomes are clear before the experiment begins.</p>
+    <p style="max-width:720px;">I try to define the question first, then work backward to the
+      measurements, controls, and experimental conditions needed to answer it.</p>
+
+    <h3 style="margin:26px 0 10px; font-size:1rem;">What I think about before starting</h3>
+    <ul style="max-width:720px; color:var(--ink-soft);">
+      <li>What is the biological question?</li>
+      <li>What variable am I actually changing?</li>
+      <li>What is the appropriate control?</li>
+      <li>What result would support or challenge the hypothesis?</li>
+      <li>What metadata will I need later during analysis?</li>
+    </ul>
+
+    <p class="loop-tags" style="margin-top:18px;"><strong style="color:var(--ink-soft);">Topics:</strong>
+      Experimental planning · Controls · Pilot studies · Lab notes · Sample tracking · Troubleshooting</p>
+
+    <h3 style="margin:30px 0 4px; font-size:1rem;">Notes I plan to share</h3>
+    <div class="note-list">
+      <div class="note-item">
+        <strong>How I plan pilot experiments before scaling up</strong>
+        <p>Start small, identify the unstable variables, and only scale once the workflow is reproducible.</p>
+      </div>
+      <div class="note-item">
+        <strong>A simple system for naming experimental files</strong>
+        <p>A consistent naming structure can save hours when experiments begin to accumulate.</p>
+      </div>
+      <div class="note-item">
+        <strong>What I record even when an experiment fails</strong>
+        <p>Failed experiments are still useful if the conditions and deviations are documented clearly.</p>
+      </div>
+      <div class="note-item">
+        <strong>Why I decide the analysis plan before collecting data</strong>
+        <p>Knowing what will eventually be measured helps prevent experiments that produce interesting
+          images but weak quantitative conclusions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 — READ & SYNTHESIZE ============ -->
+<section class="tight" id="read">
+  <div class="container">
+    <span class="eyebrow">02 · Read &amp; Synthesize</span>
+    <h2>Reading papers is different from collecting papers</h2>
+    <p style="max-width:720px;">The goal is not to accumulate PDFs. It is to understand how studies
+      relate to one another, where they disagree, and what question remains unanswered.</p>
+    <p style="max-width:720px;">When I read literature for a new project, I try to extract the
+      experimental logic rather than only the conclusion.</p>
+
+    <h3 style="margin:26px 0 10px; font-size:1rem;">What I usually extract</h3>
+    <ul style="max-width:720px; color:var(--ink-soft);">
+      <li>Research question</li>
+      <li>Model system</li>
+      <li>Key experimental variables</li>
+      <li>Methods that determine the conclusion</li>
+      <li>Major readouts</li>
+      <li>Limitations</li>
+      <li>What I would test next</li>
+    </ul>
+
+    <p class="loop-tags" style="margin-top:18px;"><strong style="color:var(--ink-soft);">Topics:</strong>
+      Literature review · Research gaps · Reference management · Comparison tables · Experimental design</p>
+
+    <h3 style="margin:30px 0 4px; font-size:1rem;">Notes I plan to share</h3>
+    <div class="note-list">
+      <div class="note-item">
+        <strong>How I read a paper when entering a new field</strong>
+        <p>I usually begin with the figures and research question before reading the paper line by line.</p>
+      </div>
+      <div class="note-item">
+        <strong>Building a literature comparison table</strong>
+        <p>Organizing model systems, conditions, and readouts side by side makes research gaps much easier to see.</p>
+      </div>
+      <div class="note-item">
+        <strong>How review papers help me design experiments</strong>
+        <p>Reviews are useful for mapping a field, but experimental papers are where I look for the
+          details needed to build a protocol.</p>
+      </div>
+      <div class="note-item">
+        <strong>From literature gap to experimental question</strong>
+        <p>A useful research gap should lead to a testable question, not simply a statement that
+          something has not been studied.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 — ANALYZE & VISUALIZE ============ -->
+<section class="bg-tint tight" id="analyze">
+  <div class="container">
+    <span class="eyebrow">03 · Analyze &amp; Visualize</span>
+    <h2>Raw data should lead to a reproducible result</h2>
+    <p style="max-width:720px;">Analysis is where an experimental observation becomes evidence.</p>
+    <p style="max-width:720px;">I use existing tools when they answer the question well, but when the
+      available workflow is too manual or does not capture the signal I need, I build custom analysis
+      pipelines.</p>
+
+    <h3 style="margin:28px 0 4px; font-size:1rem;">Tools I use</h3>
+    <div class="note-list">
+      <div class="note-item">
+        <strong>ImageJ</strong>
+        <p>Quick image inspection, ROI-based measurements, preprocessing, and basic biological image analysis.</p>
+      </div>
+      <div class="note-item">
+        <strong>GraphPad Prism</strong>
+        <p>Statistical analysis and clear biological data visualization.</p>
+      </div>
+      <div class="note-item">
+        <strong>MATLAB</strong>
+        <p>Custom analysis applications, image and video processing, signal analysis, and rapid prototyping.</p>
+      </div>
+      <div class="note-item">
+        <strong>Python</strong>
+        <p>Automated analysis pipelines, data processing, image analysis, and scalable workflow development.</p>
+      </div>
+      <div class="note-item">
+        <strong>Adobe Illustrator &amp; Inkscape</strong>
+        <p>Figure assembly, scientific illustration, and visual organization of complex experimental concepts.</p>
+      </div>
+    </div>
+
+    <p class="loop-tags" style="margin-top:18px;"><strong style="color:var(--ink-soft);">Topics:</strong>
+      Image analysis · Signal processing · Statistics · Automation · Figure design · Validation</p>
+
+    <h3 style="margin:30px 0 4px; font-size:1rem;">Notes I plan to share</h3>
+    <div class="note-list">
+      <div class="note-item">
+        <strong>How I go from raw video to a quantitative cardiac readout</strong>
+        <p>A practical workflow from ROI definition to signal extraction, normalization, feature
+          detection, and visualization.</p>
+      </div>
+      <div class="note-item">
+        <strong>Why custom analysis tools need validation</strong>
+        <p>A tool is only useful if its output can be compared against known values, manual
+          measurements, or simulated ground truth.</p>
+      </div>
+      <div class="note-item">
+        <strong>When I use MATLAB, Python, ImageJ, or Prism</strong>
+        <p>Different tools are useful at different stages; the goal is not to force every problem into
+          one software package.</p>
+      </div>
+      <div class="note-item">
+        <strong>How I organize figures before writing the manuscript</strong>
+        <p>I often build the figure logic first because it reveals whether the experimental story is
+          actually coherent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 — WRITE & COMMUNICATE ============ -->
+<section class="tight" id="write">
+  <div class="container">
+    <span class="eyebrow">04 · Write &amp; Communicate</span>
+    <h2>A clear figure often comes before a clear paragraph</h2>
+    <p style="max-width:720px;">Scientific writing becomes much easier when the logic of the experiment
+      is already organized. I usually think in terms of:</p>
+    <p class="loop-tags" style="text-transform:uppercase; letter-spacing:0.06em; font-weight:600; margin:0 0 16px;">Question → Experiment → Result → Interpretation</p>
+    <p style="max-width:720px;">and try to make each figure communicate one main point.</p>
+
+    <p class="loop-tags" style="margin-top:18px;"><strong style="color:var(--ink-soft);">Topics:</strong>
+      Figure-first writing · Thesis structure · Posters · Presentations · Manuscripts · Advisor communication</p>
+
+    <h3 style="margin:30px 0 4px; font-size:1rem;">Notes I plan to share</h3>
+    <div class="note-list">
+      <div class="note-item">
+        <strong>How I turn experiments into a thesis story</strong>
+        <p>A thesis should not be a chronological record of everything that happened in the lab. It
+          should be a structured argument.</p>
+      </div>
+      <div class="note-item">
+        <strong>Why I often plan figures before writing Results</strong>
+        <p>If a figure cannot communicate the result clearly, the underlying analysis or experimental
+          question may still need refinement.</p>
+      </div>
+      <div class="note-item">
+        <strong>How I prepare research presentations</strong>
+        <p>I try to make each slide answer one question and create a reason for the audience to care
+          about the next slide.</p>
+      </div>
+      <div class="note-item">
+        <strong>How I decide what belongs in a schematic figure</strong>
+        <p>A good schematic simplifies the system without distorting the biology.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLS I ACTUALLY USE ============ -->
+<section class="bg-tint tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Toolkit</span>
+      <h2>Tools I Actually Use</h2>
+      <p class="mb-0">These are tools I regularly use in experimental and computational work.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3 style="font-size:1rem;">Experimental</h3>
+        <p class="loop-tags mb-0">hiPSC culture · 3D tissue engineering · Flow cytometry · qRT-PCR · Immunofluorescence · Calcium imaging</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:1rem;">Analysis</h3>
+        <p class="loop-tags mb-0">ImageJ · GraphPad Prism · MATLAB · Python</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:1rem;">Simulation &amp; Fabrication</h3>
+        <p class="loop-tags mb-0">COMSOL Multiphysics · Rhino · 3D printing</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:1rem;">Visual Communication</h3>
+        <p class="loop-tags mb-0">Adobe Illustrator · Inkscape</p>
+      </div>
+    </div>
+
+    <p class="subtle" style="margin-top:18px; max-width:720px;">I am not interested in collecting
+      software skills for their own sake. I use each tool when it helps answer a biological or
+      engineering question more clearly.</p>
+  </div>
+</section>
+
+<!-- ============ LATEST NOTES ============ -->
+<section class="tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Latest notes</span>
+      <h2>First Notes</h2>
+      <p class="mb-0">These are the notes I'm writing first. Cards will link to the full posts as they go up.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3 style="font-size:1.05rem;">How I organize experimental folders</h3>
+        <p>A practical folder structure for raw data, processed data, figures, and analysis scripts.</p>
+        <p class="mb-0"><span class="subtle">Coming soon</span></p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:1.05rem;">How I validate a custom analysis pipeline</h3>
+        <p>Manual measurement, simulated ground truth, and agreement analysis.</p>
+        <p class="mb-0"><span class="subtle">Coming soon</span></p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:1.05rem;">How I build a literature matrix before starting a project</h3>
+        <p>A simple way to compare model systems, conditions, and readouts.</p>
+        <p class="mb-0"><span class="subtle">Coming soon</span></p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:1.05rem;">How I plan a scientific figure</h3>
+        <p>From scientific question to layout, annotation, and final illustration.</p>
+        <p class="mb-0"><span class="subtle">Coming soon</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOR STUDENTS ============ -->
+<section class="bg-tint tight">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">For students starting research</span>
+      <h2>Why I Made This Page</h2>
+    </div>
+    <p style="max-width:760px;">When I first started research, many of the hardest parts were not the
+      techniques themselves. It was knowing how to organize the work, how much detail to record, how
+      to recover from failed experiments, how to choose an analysis method, and how to turn months of
+      experiments into a clear scientific story.</p>
+    <p style="max-width:760px;">I learned most of these things gradually through trial and error. This
+      page is my attempt to organize those lessons into practical notes for students who are just
+      beginning experimental research.</p>
+    <p style="max-width:760px; font-weight:600; color:var(--ink);">I am still learning too, so I treat
+      these as working notes rather than universal rules.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER CTA ============ -->
+<section class="tight">
+  <div class="container">
+    <span class="eyebrow">Explore the notes</span>
+    <div class="skill-pills" style="margin-top:10px;">
+      <a href="#start" class="skill-pill">Experimental Research</a>
+      <a href="#read" class="skill-pill">Reading &amp; Synthesis</a>
+      <a href="#analyze" class="skill-pill">Analysis &amp; Visualization</a>
+      <a href="#write" class="skill-pill">Writing &amp; Communication</a>
+    </div>
+    <p style="margin-top:22px;">Have a question you think belongs here?
+      <a href="mailto:younghyunkim@sju.ac.kr">Contact me →</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3 style="color:#fff;">Young Hyun Kim</h3>
+        <p style="color:rgba(214,232,230,0.75); max-width:340px;">Ph.D. Applicant · Cardiac Tissue Engineering &amp; Computational Bioimaging<br>
+        Biological Systems Engineering Laboratory, Sejong University, Seoul, Korea</p>
+      </div>
+      <div>
+        <div class="footer-avatar"><div class="inner">Add your photo here<br>(assets/img/profile.jpg)</div></div>
+        <h4 style="color:#fff;">Connect</h4>
+        <p><a href="mailto:younghyunkim@sju.ac.kr">Email</a><br><a href="assets/CV_Younghyun_Kim.pdf">CV (PDF)</a><br><a href="https://www.instagram.com/yh.bioatelier/" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-note">© 2026 Young Hyun Kim. Built with plain HTML/CSS/JS — hosted on GitHub Pages.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
