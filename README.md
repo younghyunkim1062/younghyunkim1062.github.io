@@ -101,11 +101,11 @@ files) and add an `active` class only on the page it points to.
   shows on a white background instead of a `cover` crop.
 - **Figures**: large source files go in `assets/img/figures/` alongside a web-sized thumbnail
   (`-thumb.jpg`, ~640-700px) and a capped full-res (`-full.jpg`, ~1600-2000px). Reference the thumb
-  in `.illus-thumb img` and the full in `data-full`. `figures.html` currently shows three real
-  first-author review figures (Microsystems & Nanoengineering, 2026): `graphical-abstract`,
-  `heart-organization` (Figure 1), and `figure7-applications.svg` + `fig-readouts-thumb.png`
-  (Figure 7). Source figures were in `대학원/이력정리/Microsystems&nanoengineering/`. No npj Robotics
-  figure is on the site — the folder for it was empty; the page notes the credit and links the paper.
+  in `.illus-thumb img` and the full in `data-full`. `figures.html` shows a 2×2 grid: three
+  first-author review figures (Microsystems & Nanoengineering, 2026) — `graphical-abstract`,
+  `heart-organization` (Figure 1), `figure7-applications.svg` + `fig-readouts-thumb.png` (Figure 7) —
+  and one second-author (`biohybrid-actuators`, npj Robotics 2025 Figure 1). Source figures were in
+  `대학원/이력정리/Microsystems&nanoengineering/` and `Downloads/Fig 1.png`.
 - **Research > "Visual overview"**: a 2-column `.illus-grid` (4 placeholder tiles — Figure A–D,
   covering organoid fabrication, Ca²⁺ phenotype, iCAMAnalyzer, and multi-organoid scalability) sits
   in the Master's Thesis section. Each placeholder is a plain `<div class="illus-item"
@@ -128,12 +128,10 @@ files) and add an `active` class only on the page it points to.
   If you'd rather make some protocols fully public (or sell them), edit that page directly.
 - **Figures & Illustration** (`figures.html`, titled "Scientific Illustration & Visual
   Communication"): positioned as a demonstrated skill (structuring a concept → composition → final
-  artwork), not a commercial pitch. Three real first-author review figures + a one-line note that
-  the npj Robotics schematics are credited but not shown. A compact "Process / Tools" line sits
-  under the grid (no separate stats cards). `publications.html`'s `#pub-illustration` section
-  mirrors the same three thumbnails as a teaser and links here. To add the missing npj Robotics
-  figure later, drop a `-thumb.jpg`/`-full` pair in `assets/img/figures/` and add a fourth card
-  following the same pattern.
+  artwork), not a commercial pitch. Four real review figures in a 2×2 grid (3 first-author +
+  1 second-author). A compact "Process / Tools" line sits under the grid (no separate stats cards).
+  `publications.html`'s `#pub-illustration` section mirrors the three cardiac thumbnails as a teaser
+  and links here; the npj Robotics entry links to `figures.html#fig-2025`.
 
 ## Preview locally
 
