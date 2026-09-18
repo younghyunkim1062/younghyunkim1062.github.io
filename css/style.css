@@ -1310,3 +1310,80 @@ a.skill-pill:hover { border-color: var(--primary); color: var(--primary); }
     margin: 0 8px;
   }
 }
+
+
+/* Home-page polish: spacing, hierarchy, and publication proportions */
+.home-research-section .section-head,
+.featured-publication-section .section-head,
+.home-turning-points-section .section-head,
+.home-blog-section .section-head {
+  margin-bottom: 32px;
+}
+
+.home-research-section,
+.featured-publication-section,
+.home-turning-points-section,
+.home-blog-section {
+  padding-top: 52px;
+  padding-bottom: 52px;
+}
+
+.home-research-section .card {
+  padding: 22px 22px 24px;
+}
+
+.home-research-section .card h3 {
+  margin-bottom: 8px;
+}
+
+.featured-pub {
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 34px;
+  align-items: center;
+}
+
+.featured-pub-image {
+  width: 220px;
+  aspect-ratio: 4 / 3;
+}
+
+.featured-pub-title {
+  font-size: clamp(1.28rem, 1.9vw, 1.68rem);
+  line-height: 1.24;
+}
+
+.featured-pub-summary {
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.featured-pub-links {
+  margin-top: 2px;
+}
+
+@media (max-width: 700px) {
+  .home-research-section,
+  .featured-publication-section,
+  .home-turning-points-section,
+  .home-blog-section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .home-research-section .section-head,
+  .featured-publication-section .section-head,
+  .home-turning-points-section .section-head,
+  .home-blog-section .section-head {
+    margin-bottom: 26px;
+  }
+
+  .featured-pub {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .featured-pub-image {
+    width: 100%;
+    max-width: 320px;
+  }
+}
