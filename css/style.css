@@ -1387,3 +1387,20 @@ a.skill-pill:hover { border-color: var(--primary); color: var(--primary); }
     max-width: 320px;
   }
 }
+
+
+/* Publications page: expanded editorial featured paper */
+.publications-featured {
+  padding: 4px 0 8px;
+}
+
+.publications-featured .featured-pub-role {
+  margin: 12px 0 0;
+  max-width: 760px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.publications-featured .featured-pub-role strong {
+  color: var(--ink);
+}
