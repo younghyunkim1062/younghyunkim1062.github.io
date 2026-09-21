@@ -1404,3 +1404,27 @@ a.skill-pill:hover { border-color: var(--primary); color: var(--primary); }
 .publications-featured .featured-pub-role strong {
   color: var(--ink);
 }
+
+
+/* About profile photo */
+.about-profile-wrap {
+  width: 100%;
+  max-width: 390px;
+  margin-left: auto;
+  align-self: center;
+}
+
+.about-profile-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(26, 26, 26, 0.18);
+  background: #fff;
+}
+
+@media (max-width: 780px) {
+  .about-profile-wrap {
+    max-width: 420px;
+    margin: 28px 0 0;
+  }
+}
