@@ -1467,3 +1467,19 @@ a.skill-pill:hover { border-color: var(--primary); color: var(--primary); }
     height: 170px;
   }
 }
+
+
+.footer-identity {
+  color: rgba(214,232,230,0.75);
+  max-width: 560px;
+}
+
+.footer-nowrap {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .footer-nowrap {
+    white-space: normal;
+  }
+}
