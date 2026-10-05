@@ -106,13 +106,16 @@ files) and add an `active` class only on the page it points to.
   `heart-organization` (Figure 1), `figure7-applications.svg` + `fig-readouts-thumb.png` (Figure 7) —
   and one second-author (`biohybrid-actuators`, npj Robotics 2025 Figure 1). Source figures were in
   `대학원/이력정리/Microsystems&nanoengineering/` and `Downloads/Fig 1.png`.
-- **Research > "Visual overview"**: a 2-column `.illus-grid` (4 placeholder tiles — Figure A–D,
-  covering organoid fabrication, Ca²⁺ phenotype, iCAMAnalyzer, and multi-organoid scalability) sits
-  in the Master's Thesis section. Each placeholder is a plain `<div class="illus-item"
-  style="cursor:default;">`; once you have the real figure files, follow the same pattern as the
-  Scientific Illustration gallery above — save a full-res source + a cropped/resized PNG thumbnail
-  to `assets/img/figures/`, then swap the placeholder `<div>` for a `<button class="illus-item"
-  data-full="..." data-caption="...">`.
+- **Research figures**: Figures A–C illustrate model generation, chamber identity, and physiological
+  validation. The Measure and Scale sections show three focused details of the existing Figure D:
+  `research-calcium-panel.jpg`, `research-motion-panel.jpg`, and `research-parallel-panel.jpg`.
+  Each opens the unchanged `research-fig-d-full.png` in the lightbox; captions identify the details
+  as parts of that figure, not new experiments. Page-specific layout is in `css/research.css`.
+  The JPEG details are cropped from the 1672×941 source at `(left, top, width, height)`:
+  calcium `(842, 75, 808, 446)`, motion `(21, 532, 809, 383)`, and parallel analysis
+  `(842, 532, 808, 383)`, encoded at quality 92 with 4:4:4 chroma sampling. No scientific labels,
+  traces, or values are altered. A separate micropillar photograph or parallel recording can be
+  added when an appropriate source is available; the current array visual is a still figure panel.
 - **Research Starter Kit** (`research-starter-kit.html`): an article-hub-style page of practical
   research notes, framed as "things I wish I'd known on day one" — deliberately not a "how to get
   into grad school" guide. Four numbered sections (01 Start the Experiment / 02 Read & Synthesize /

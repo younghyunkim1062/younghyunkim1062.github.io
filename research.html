@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/research.css">
 </head>
 <body>
 
@@ -147,10 +148,11 @@
     <div class="measure-columns">
       <div>
         <h4 style="margin-bottom:6px;">Electrical / Ca²⁺ — iCAMAnalyzer</h4>
-        <button class="illus-item" data-full="assets/img/figures/research-fig-d-full.png" data-caption="iCAMAnalyzer — calcium kinetics, activation mapping, conduction velocity">
-          <div class="illus-thumb" style="aspect-ratio:16/9;"><img src="assets/img/figures/research-fig-d-thumb.jpg" alt="iCAMAnalyzer platform"></div>
+        <button class="illus-item research-panel" data-full="assets/img/figures/research-fig-d-full.png" data-caption="Figure D — Integrated Analysis Platform: calcium analysis, label-free motion analysis, and parallel organoid analysis" aria-label="View full integrated analysis figure — calcium analysis detail">
+          <div class="illus-thumb"><img src="assets/img/figures/research-calcium-panel.jpg" width="808" height="446" loading="lazy" decoding="async" alt="Calcium analysis panel with an activation map and a representative calcium transient"></div>
         </button>
-        <ul style="margin:12px 0 0; padding-left:20px; color:var(--ink-soft); font-size:0.92rem;">
+        <p class="research-panel-caption">Calcium analysis detail from Figure D. Select to view the full figure.</p>
+        <ul class="research-readouts">
           <li>Ca²⁺ transient kinetics</li>
           <li>Activation mapping</li>
           <li>Conduction velocity</li>
@@ -161,15 +163,16 @@
 
       <div>
         <h4 style="margin-bottom:6px;">Mechanical — Motion Analysis</h4>
-        <div class="card" style="height:100%; padding:22px;">
-          <span class="tag">Label-free readout</span>
-          <p style="margin:10px 0 12px;">Bright-field motion analysis provides a complementary mechanical readout without fluorescent labeling.</p>
-          <ul style="margin:0; padding-left:20px; color:var(--ink-soft); font-size:0.92rem;">
-            <li>Beating rate</li>
-            <li>Contraction magnitude</li>
-            <li>Contraction duration</li>
-          </ul>
-        </div>
+        <button class="illus-item research-panel" data-full="assets/img/figures/research-fig-d-full.png" data-caption="Figure D — Integrated Analysis Platform: calcium analysis, label-free motion analysis, and parallel organoid analysis" aria-label="View full integrated analysis figure — motion analysis detail">
+          <div class="illus-thumb"><img src="assets/img/figures/research-motion-panel.jpg" width="809" height="383" loading="lazy" decoding="async" alt="Label-free motion analysis panel showing bright-field boundary detection, area over time, and averaged contraction"></div>
+        </button>
+        <p class="research-panel-caption">Motion analysis detail from Figure D. Select to view the full figure.</p>
+        <p style="margin:12px 0;">Bright-field motion analysis provides a complementary mechanical readout without fluorescent labeling.</p>
+        <ul class="research-readouts">
+          <li>Beating rate</li>
+          <li>Contraction magnitude</li>
+          <li>Contraction duration</li>
+        </ul>
       </div>
     </div>
 
@@ -194,19 +197,27 @@
       <p class="mb-0">I extended the platform toward parallel acquisition and higher-throughput analysis while keeping the chamber-specific functional readouts central.</p>
     </div>
 
-    <div class="grid grid-2">
-      <div class="card">
-        <span class="tag">3D-printed platform</span>
-        <h3>Micropillar Culture Platform</h3>
-        <p>Custom SLA-fabricated micropillar arrays were designed for multi-organoid culture, positioning, and imaging.</p>
-        <p class="loop-tags mb-0">SLA fabrication · Multi-organoid layout · Imaging compatibility</p>
+    <div class="card research-scale-layout">
+      <div class="research-scale-copy">
+        <div>
+          <span class="tag">3D-printed platform</span>
+          <h3>Micropillar Culture Platform</h3>
+          <p>Custom SLA-fabricated micropillar arrays were designed for multi-organoid culture, positioning, and imaging.</p>
+          <p class="loop-tags mb-0">SLA fabrication · Multi-organoid layout · Imaging compatibility</p>
+        </div>
+        <div>
+          <span class="tag">Parallel acquisition</span>
+          <h3>9-Organoid Recording</h3>
+          <p>Parallel acquisition across nine organoids served as a proof-of-concept for scaling functional phenotyping beyond one sample at a time.</p>
+          <p class="loop-tags mb-0">Parallel recording · Batch comparison · Higher-throughput phenotyping</p>
+        </div>
       </div>
-      <div class="card">
-        <span class="tag">Parallel acquisition</span>
-        <h3>9-Organoid Recording</h3>
-        <p>Parallel acquisition across nine organoids served as a proof-of-concept for scaling functional phenotyping beyond one sample at a time.</p>
-        <p class="loop-tags mb-0">Parallel recording · Batch comparison · Higher-throughput phenotyping</p>
-      </div>
+      <figure class="research-scale-figure">
+        <button class="illus-item research-panel" data-full="assets/img/figures/research-fig-d-full.png" data-caption="Figure D — Integrated Analysis Platform: calcium analysis, label-free motion analysis, and parallel organoid analysis" aria-label="View full integrated analysis figure — nine-organoid detail">
+          <div class="illus-thumb"><img src="assets/img/figures/research-parallel-panel.jpg" width="808" height="383" loading="lazy" decoding="async" alt="Parallel analysis panel showing a nine-organoid bright-field array and representative calcium traces for each organoid"></div>
+        </button>
+        <figcaption class="research-panel-caption">Nine-organoid array and representative calcium traces, shown as a detail from Figure D. Select to view the full figure.</figcaption>
+      </figure>
     </div>
 
     <p class="subtle" style="margin-top:18px;"><strong style="color:var(--ink);">Potential application.</strong> This framework could support higher-throughput functional screening and cardiotoxicity assessment.</p>
