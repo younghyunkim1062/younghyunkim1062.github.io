@@ -52,27 +52,23 @@
       <div class="protocol-card">
         <span class="lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg> Full protocol on request</span>
         <h3>Chamber-Specific Cardiomyocyte Differentiation</h3>
-        <p>Directed differentiation of hiPSCs into ventricular or atrial cardiomyocytes, with a
-          chamber-identity characterization workflow (qRT-PCR: NR2F2, IRX4; immunofluorescence;
+        <p>A 2D-to-3D workflow starting with hiPSC culture in 2D, followed by embryoid-body formation and cardiac differentiation in 3D to generate atrial- and ventricular-like organoids. Chamber identity is assessed using a characterization workflow (qRT-PCR: NR2F2, IRX4; immunofluorescence;
           flow cytometry: TNNT2).</p>
         <p class="subtle mb-0">Result: ~97.5% cTNT⁺ efficiency for ventricular cardiomyocytes.</p>
       </div>
 
       <div class="protocol-card">
         <span class="lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg> Full protocol on request</span>
-        <h3>iCAMAnalyzer — Calcium-Imaging Analysis</h3>
-        <p>MATLAB App Designer pipeline for ΔF/F₀ normalization, ensemble-averaged transient kinetics,
-          beat-to-beat analysis, pixel-level activation mapping, and conduction-velocity estimation from
-          cardiac organoid calcium imaging.</p>
-        <p class="subtle mb-0">Result: ~7% error vs. synthetic ground-truth conduction velocity.</p>
+        <h3>iCAMAnalyzer — Integrated Python Analysis Platform</h3>
+        <p>An integrated Python platform combining calcium-transient analysis, calcium-based activation mapping, and label-free motion analysis. The calcium modules support ΔF/F₀ normalization, ensemble-averaged kinetics, beat-to-beat analysis, pixelwise activation timing, and calcium-derived propagation velocity estimation.</p>
+        <p class="subtle mb-0">Validation: ~7% error relative to known propagation velocities in the evaluated synthetic videos. The activation-mapping module was also assessed for the effects of frame rate, noise, and spatial resolution. Calcium-derived propagation velocity is not a direct measurement of electrical conduction velocity.</p>
       </div>
 
       <div class="protocol-card">
         <span class="lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg> Full protocol on request</span>
-        <h3>Multi-Organoid Contraction &amp; Ca²⁺ Imaging Pipeline</h3>
-        <p>Streamlit/Python pipeline for simultaneous 9-well brightfield contraction and calcium imaging
-          analysis, with automated ROI detection and manual correction.</p>
-        <p class="subtle mb-0">Enables higher-throughput, multi-well organoid screening.</p>
+        <h3>Parallel Multi-Organoid Analysis</h3>
+        <p>The Python analysis workflow supports parallel analysis across multiple organoids, including a nine-organoid proof of concept, with automated ROI detection and manual correction. Calcium and brightfield recordings are analyzed as separate acquisitions; parallel analysis refers to multiple organoids, not simultaneous calcium–brightfield imaging.</p>
+        <p class="subtle mb-0">Synchronized calcium–brightfield acquisition is a separate dual-camera hardware project currently under development.</p>
       </div>
 
       <div class="protocol-card">
