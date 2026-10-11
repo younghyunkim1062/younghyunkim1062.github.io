@@ -1,128 +1,110 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Methods &amp; Workflows — Young Hyun Kim</title>
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
+<link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<meta content="Methods for cardiac organoid generation, calcium and motion analysis, and multi-organoid phenotyping." name="description"/><meta content="Methods &amp; Workflows — Young Hyun Kim" property="og:title"/><meta content="Methods for cardiac organoid generation, calcium and motion analysis, and multi-organoid phenotyping." property="og:description"/><meta content="website" property="og:type"/><meta content="https://younghyunkim1062.github.io/protocols.html" property="og:url"/><link href="https://younghyunkim1062.github.io/protocols.html" rel="canonical"/></head>
+<body><a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
-  <nav class="nav">
-    <a href="index.html" class="brand"><span class="badge"><span>YK</span></span>Young Hyun Kim</a>
-    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li class="has-dropdown">
-        <a href="research.html" class="nav-link">Research</a>
-        <div class="dropdown"><a href="research.html">Overview</a><a href="protocols.html" class="active">Methods &amp; Workflows</a><a href="figures.html">Figures &amp; Illustration</a></div>
-      </li>
-      <li><a href="publications.html" class="nav-link">Publications</a></li>
-      <li><a href="about.html" class="nav-link">About</a></li>
-      <li class="has-dropdown">
-        <a href="blog.html" class="nav-link">Blog</a>
-        <div class="dropdown"><a href="blog.html">Overview</a><a href="blog-travel.html">Travel</a><a href="blog-making.html">Making</a><a href="blog-gallery.html">Under the Scope</a><a href="research-starter-kit.html">Research Starter Kit</a></div>
-      </li>
-      <li><a href="assets/CV_Younghyun_Kim.pdf" class="nav-link" target="_blank" rel="noopener">CV</a></li>
-    </ul>
-  </nav>
-</header>
-
+<nav class="nav">
+<a class="brand" href="index.html"><span class="badge"><span>YK</span></span>Young Hyun Kim</a>
+<button aria-label="Toggle navigation" class="nav-toggle"><span></span><span></span><span></span></button>
+<ul class="nav-links">
+<li><a class="nav-link" href="index.html">Home</a></li>
+<li class="has-dropdown">
+<a class="nav-link" href="research.html">Research</a>
+<div class="dropdown"><a href="research.html">Overview</a><a class="active" href="protocols.html">Methods &amp; Workflows</a><a href="figures.html">Figures &amp; Illustration</a></div>
+</li>
+<li><a class="nav-link" href="publications.html">Publications</a></li>
+<li><a class="nav-link" href="about.html">About</a></li>
+<li class="has-dropdown">
+<a class="nav-link" href="blog.html">Blog</a>
+<div class="dropdown"><a href="blog.html">Overview</a><a href="blog-travel.html">Travel</a><a href="blog-making.html">Making</a><a href="blog-gallery.html">Under the Scope</a><a href="research-starter-kit.html">Research Starter Kit</a></div>
+</li>
+<li><a class="nav-link" href="assets/CV_Younghyun_Kim.pdf" rel="noopener" target="_blank">CV</a></li>
+</ul>
+</nav>
+</header><main id="main-content">
 <section class="tight">
-  <div class="container">
-    <span class="eyebrow">Research &rsaquo; Methods &amp; Workflows</span>
-    <h1>Methods &amp; Workflows</h1>
-    <p style="font-size:1.05rem; max-width:720px;">
-      Summaries of protocols and tools developed in the lab. I'm keeping the full step-by-step versions
-      off the public site for now — what's below is the purpose and validated result of each. If you'd
-      like the complete protocol (for collaboration, replication, or licensing), reach out and I'm happy
-      to share.
-    </p>
-  </div>
+<div class="container">
+<span class="eyebrow">Research › Methods &amp; Workflows</span>
+<h1>Methods &amp; Workflows</h1>
+<p style="font-size:1.05rem; max-width:720px;">An overview of the models, analysis tools, and measurement workflows behind my research. Completed methods and ongoing hardware development are identified separately. Please contact me to discuss methodological details or collaboration.</p>
+</div>
 </section>
-
 <section class="tight">
-  <div class="container">
-    <div class="grid grid-2">
-
-      <div class="protocol-card">
-        <span class="lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg> Full protocol on request</span>
-        <h3>Chamber-Specific Cardiomyocyte Differentiation</h3>
-        <p>A 2D-to-3D workflow starting with hiPSC culture in 2D, followed by embryoid-body formation and cardiac differentiation in 3D to generate atrial- and ventricular-like organoids. Chamber identity is assessed using a characterization workflow (qRT-PCR: NR2F2, IRX4; immunofluorescence;
-          flow cytometry: TNNT2).</p>
-        <p class="subtle mb-0">Result: ~97.5% cTNT⁺ efficiency for ventricular cardiomyocytes.</p>
-      </div>
-
-      <div class="protocol-card">
-        <span class="lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg> Full protocol on request</span>
-        <h3>iCAMAnalyzer — Integrated Python Analysis Platform</h3>
-        <p>An integrated Python platform combining calcium-transient analysis, calcium-based activation mapping, and label-free motion analysis. The calcium modules support ΔF/F₀ normalization, ensemble-averaged kinetics, beat-to-beat analysis, pixelwise activation timing, and calcium-derived propagation velocity estimation.</p>
-        <p class="subtle mb-0">Validation: ~7% error relative to known propagation velocities in the evaluated synthetic videos. The activation-mapping module was also assessed for the effects of frame rate, noise, and spatial resolution. Calcium-derived propagation velocity is not a direct measurement of electrical conduction velocity.</p>
-      </div>
-
-      <div class="protocol-card">
-        <span class="lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg> Full protocol on request</span>
-        <h3>Parallel Multi-Organoid Analysis</h3>
-        <p>The Python analysis workflow supports parallel analysis across multiple organoids, including a nine-organoid proof of concept, with automated ROI detection and manual correction. Calcium and brightfield recordings are analyzed as separate acquisitions; parallel analysis refers to multiple organoids, not simultaneous calcium–brightfield imaging.</p>
-        <p class="subtle mb-0">Synchronized calcium–brightfield acquisition is a separate dual-camera hardware project currently under development.</p>
-      </div>
-
-      <div class="protocol-card">
-        <span class="lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg> Full protocol on request</span>
-        <h3>Organoid Diameter Analyzer</h3>
-        <p>Custom MATLAB tool for automated organoid diameter measurement from brightfield images,
+<div class="container">
+<div class="grid grid-2">
+<div class="protocol-card">
+<span class="lock"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" style="display:inline-block;vertical-align:-4px;flex-shrink:0;" viewbox="0 0 24 24" width="14"><rect height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></svg> Full protocol on request</span>
+<h3>Chamber-Specific Cardiomyocyte Differentiation</h3>
+<p>hiPSCs are cultured in 2D before embryoid-body formation and subsequent cardiac differentiation in 3D. Wnt and retinoic-acid modulation support atrial- and ventricular-like tissue generation. Characterization includes qRT-PCR and flow cytometry in monolayer cultures, alongside immunofluorescence in 3D tissues.</p>
+<details class="content-needed"><summary>Characterization data to add</summary><p>Add marker panels and quantitative data with differentiation day, independent batches, gating strategy, and the source culture format.</p></details>
+</div>
+<div class="protocol-card">
+<span class="lock"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" style="display:inline-block;vertical-align:-4px;flex-shrink:0;" viewbox="0 0 24 24" width="14"><rect height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></svg> Full protocol on request</span>
+<h3>iCAMAnalyzer — Integrated Python Analysis Platform</h3>
+<p>An integrated Python platform combining calcium-transient analysis, calcium-based activation mapping, and label-free motion analysis. The calcium modules support ΔF/F₀ normalization, ensemble-averaged kinetics, beat-to-beat analysis, pixelwise activation timing, and calcium-derived propagation velocity estimation.</p>
+<p class="subtle mb-0">Validation used synthetic videos with known propagation velocities, including assessment of frame rate, noise, and spatial resolution, plus frame-by-frame checks against experimental recordings. Calcium-derived propagation velocity is not a direct measurement of electrical conduction velocity.</p>
+</div>
+<div class="protocol-card">
+<span class="lock"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" style="display:inline-block;vertical-align:-4px;flex-shrink:0;" viewbox="0 0 24 24" width="14"><rect height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></svg> Full protocol on request</span>
+<h3>Parallel Multi-Organoid Analysis</h3>
+<p>The Python analysis workflow supports parallel analysis across multiple organoids, including a nine-organoid proof of concept, with automated ROI detection and manual correction. Calcium and brightfield recordings are analyzed as separate acquisitions; parallel analysis refers to multiple organoids, not simultaneous calcium–brightfield imaging.</p>
+<p class="subtle mb-0">Synchronized calcium–brightfield acquisition is a separate dual-camera hardware project currently under development.</p>
+</div>
+<div class="protocol-card">
+<span class="lock"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" style="display:inline-block;vertical-align:-4px;flex-shrink:0;" viewbox="0 0 24 24" width="14"><rect height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></svg> Full protocol on request</span>
+<h3>Organoid Diameter Analyzer</h3>
+<p>Custom MATLAB tool for automated organoid diameter measurement from brightfield images,
           cross-validated against manual measurement.</p>
-        <p class="subtle mb-0">Validated via Bland–Altman and correlation analysis (GraphPad Prism).</p>
-      </div>
-
-      <div class="protocol-card">
-        <span class="lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg> Full protocol on request</span>
-        <h3>3D Skeletal Muscle Tissue Engineering</h3>
-        <p>Fabrication of 3D skeletal muscle tissue on custom scaffolds, with assessment of contractile
+<p class="subtle mb-0">Validated via Bland–Altman and correlation analysis (GraphPad Prism).</p>
+</div>
+<div class="protocol-card">
+<span class="lock"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" style="display:inline-block;vertical-align:-4px;flex-shrink:0;" viewbox="0 0 24 24" width="14"><rect height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></svg> Full protocol on request</span>
+<h3>3D Skeletal Muscle Tissue Engineering</h3>
+<p>Fabrication of 3D skeletal muscle tissue on custom scaffolds, with assessment of contractile
           function and calcium-signal propagation.</p>
-      </div>
-
-      <div class="protocol-card">
-        <span class="lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg> Full protocol on request</span>
-        <h3>Microfluidic Chip Simulation Workflow</h3>
-        <p>COMSOL Multiphysics simulation setup for fluid velocity and electric-potential fields in
+</div>
+<div class="protocol-card">
+<span class="lock"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" style="display:inline-block;vertical-align:-4px;flex-shrink:0;" viewbox="0 0 24 24" width="14"><rect height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></svg> Full protocol on request</span>
+<h3>Microfluidic Chip Simulation Workflow</h3>
+<p>COMSOL Multiphysics simulation setup for fluid velocity and electric-potential fields in
           microfluidic chips used for tissue culture and stimulation.</p>
-      </div>
-
-    </div>
-
-    <div class="card text-center" style="margin-top:36px;">
-      <h3 class="mb-0">Want the full protocol?</h3>
-      <p>Email me and let me know which one — happy to discuss collaboration, replication, or use in your own lab.</p>
-      <a href="mailto:younghyunkim@sju.ac.kr?subject=Protocol%20request" class="btn btn-primary">Request a protocol</a>
-    </div>
-  </div>
+</div>
+</div>
+<div class="card text-center" style="margin-top:36px;">
+<h3 class="mb-0">Want the full protocol?</h3>
+<p>Email me and let me know which one — happy to discuss collaboration, replication, or use in your own lab.</p>
+<a class="btn btn-primary" href="mailto:younghyunkim@sju.ac.kr?subject=Protocol%20request">Request a protocol</a>
+</div>
+</div>
 </section>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h3 style="color:#fff;">Young Hyun Kim</h3>
-        <p class="footer-identity">
-          <span class="footer-nowrap">Cardiac Tissue Engineering · Quantitative Physiology</span><br>
-          <span class="footer-nowrap">Biological Systems Engineering Laboratory, Sejong University</span><br>
+</main><footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<h3 style="color:#fff;">Young Hyun Kim</h3>
+<p class="footer-identity">
+<span class="footer-nowrap">Cardiac Tissue Engineering · Quantitative Physiology</span><br/>
+<span class="footer-nowrap">Biological Systems Engineering Laboratory, Sejong University</span><br/>
           Seoul, Republic of Korea
         </p>
-      </div>
-      <div>
-        <h4 style="color:#fff;">Connect</h4>
-        <p><a href="mailto:younghyunkim@sju.ac.kr">Email</a><br><a href="assets/CV_Younghyun_Kim.pdf">CV (PDF)</a></p>
-      </div>
-    </div>
-    <div class="footer-note">© 2026 Young Hyun Kim. Built with plain HTML/CSS/JS — hosted on GitHub Pages.</div>
-  </div>
+</div>
+<div>
+<h4 style="color:#fff;">Connect</h4>
+<p><a href="mailto:younghyunkim@sju.ac.kr">Email</a><br/><a href="assets/CV_Younghyun_Kim.pdf">CV (PDF)</a></p>
+</div>
+</div>
+<div class="footer-note">© 2026 Young Hyun Kim</div>
+</div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>
