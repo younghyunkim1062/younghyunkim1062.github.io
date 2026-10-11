@@ -39,7 +39,7 @@
     <h1>From Chamber-Specific Cardiac Organoids to Electromechanical Function</h1>
     <p style="font-size:1.05rem; max-width:800px;">
       I engineer chamber-specific cardiac organoids from hiPSCs and use quantitative phenotyping to
-      determine how cardiac identity is reflected in calcium dynamics, electrical propagation, and contraction.
+      determine how cardiac identity is reflected in calcium dynamics, calcium-derived propagation, and contraction.
     </p>
     <p style="font-size:1rem; max-width:800px;">
       I am now interested in what physical and mechanical environments drive those functional phenotypes.
@@ -66,14 +66,14 @@
         <div class="loop-num">01</div>
         <h4>Build</h4>
         <p class="loop-sub">Chamber-specific cardiac organoids</p>
-        <p class="loop-tags">hiPSC · Embryoid body · 3D directed differentiation · Atrial / ventricular-like identity</p>
+        <p class="loop-tags">2D hiPSC culture · 3D embryoid-body formation · 3D cardiac differentiation · Atrial / ventricular-like identity</p>
       </div>
       <div class="loop-stage is-current">
         <span class="loop-badge current">M.S. work</span>
         <div class="loop-num">02</div>
         <h4>Measure</h4>
         <p class="loop-sub">Electromechanical phenotype</p>
-        <p class="loop-tags">Ca²⁺ · Activation · Conduction · Contraction</p>
+        <p class="loop-tags">Ca²⁺ kinetics · Calcium-based activation mapping · Calcium-derived propagation · Motion</p>
       </div>
       <div class="loop-stage is-current">
         <span class="loop-badge current">M.S. work</span>
@@ -107,7 +107,7 @@
     </div>
 
     <h3 style="margin-bottom:4px;">01 — Build: Chamber-Specific Cardiac Organoids</h3>
-    <p class="loop-tags" style="margin-bottom:18px;">hiPSC · Embryoid body formation · Wnt / RA modulation · 3D directed differentiation</p>
+    <p class="loop-tags" style="margin-bottom:18px;">2D hiPSC culture · 3D embryoid-body formation · Wnt / RA modulation · 3D cardiac differentiation</p>
 
     <div class="card" style="margin-bottom:24px; padding:20px 22px;">
       <span class="eyebrow" style="margin-bottom:8px;">Why two chambers?</span>
@@ -121,10 +121,10 @@
 
     <div class="grid grid-2">
       <div>
-        <button class="illus-item" data-full="assets/img/figures/research-fig-a-full.png" data-caption="Figure A — Building the Model">
+        <button class="illus-item" data-full="assets/img/figures/research-fig-a-full.png" data-caption="Figure A — Building the Model: hiPSCs are cultured in 2D; embryoid-body formation and subsequent cardiac differentiation take place in 3D.">
           <div class="illus-thumb" style="aspect-ratio:16/9;"><img src="assets/img/figures/research-fig-a-thumb.jpg" alt="Figure A — Building the Model"></div>
         </button>
-        <p class="subtle" style="margin-top:10px;"><strong style="color:var(--ink);">Model generation.</strong> hiPSC → embryoid body formation → 3D cardiac differentiation → atrial- / ventricular-like organoids.</p>
+        <p class="subtle" style="margin-top:10px;"><strong style="color:var(--ink);">Model generation.</strong> 2D hiPSC culture → 3D embryoid-body formation → 3D cardiac differentiation → atrial- / ventricular-like organoids. The 2D stage refers to hiPSC culture; the 3D stage begins with embryoid-body formation.</p>
       </div>
       <div>
         <button class="illus-item" data-full="assets/img/figures/research-fig-b-full.png" data-caption="Figure B — Validating Chamber Identity">
@@ -139,7 +139,9 @@
 <section class="bg-tint tight">
   <div class="container">
     <h3 style="margin-bottom:4px;">02 — Measure: Electromechanical Phenotyping</h3>
-    <p class="loop-tags" style="margin-bottom:18px;">Ca²⁺ kinetics · Activation mapping · Conduction · Motion analysis · Physiological validation</p>
+    <p class="loop-tags" style="margin-bottom:18px;">Ca²⁺ kinetics · Calcium-based activation mapping · Calcium-derived propagation velocity · Motion analysis</p>
+
+    <p>I developed iCAMAnalyzer, an integrated Python platform combining calcium-transient analysis, calcium-based activation mapping, and label-free motion analysis. Software integration and synthetic validation are complete; synchronized calcium–brightfield acquisition is a separate hardware project under development.</p>
 
     <div class="ec-flow">
       <span>Excitation</span><span class="arrow">→</span><span>Ca²⁺</span><span class="arrow">→</span><span>Contraction</span>
@@ -147,27 +149,27 @@
 
     <div class="measure-columns">
       <div>
-        <h4 style="margin-bottom:6px;">Electrical / Ca²⁺ — iCAMAnalyzer</h4>
-        <button class="illus-item research-panel" data-full="assets/img/figures/research-fig-d-full.png" data-caption="Figure D — Integrated Analysis Platform: calcium analysis, label-free motion analysis, and parallel organoid analysis" aria-label="View full integrated analysis figure — calcium analysis detail">
+        <h4 style="margin-bottom:6px;">Calcium Analysis — iCAMAnalyzer</h4>
+        <button class="illus-item research-panel" data-full="assets/img/figures/research-fig-d-full.png" data-caption="Figure D — Integrated Python Analysis Platform: calcium-based activation mapping and calcium-derived propagation velocity, label-free motion analysis, and parallel multi-organoid analysis. Calcium and brightfield recordings were acquired separately." aria-label="View full integrated analysis figure — calcium analysis detail">
           <div class="illus-thumb"><img src="assets/img/figures/research-calcium-panel.jpg" width="808" height="446" loading="lazy" decoding="async" alt="Calcium analysis panel with an activation map and a representative calcium transient"></div>
         </button>
-        <p class="research-panel-caption">Calcium analysis detail from Figure D. Select to view the full figure.</p>
+        <p class="research-panel-caption">Calcium analysis detail from Figure D. Activation timing and propagation velocity are derived from calcium fluorescence, not direct voltage recordings. The figure’s “Conduction Velocity” label refers to calcium-derived propagation velocity. Select to view the full figure.</p>
         <ul class="research-readouts">
           <li>Ca²⁺ transient kinetics</li>
-          <li>Activation mapping</li>
-          <li>Conduction velocity</li>
+          <li>Calcium-based activation mapping</li>
+          <li>Calcium-derived propagation velocity</li>
         </ul>
       </div>
 
-      <div class="divider-label">Complementary readouts → integrated E–C phenotype</div>
+      <div class="divider-label">Complementary calcium and motion readouts</div>
 
       <div>
-        <h4 style="margin-bottom:6px;">Mechanical — Motion Analysis</h4>
-        <button class="illus-item research-panel" data-full="assets/img/figures/research-fig-d-full.png" data-caption="Figure D — Integrated Analysis Platform: calcium analysis, label-free motion analysis, and parallel organoid analysis" aria-label="View full integrated analysis figure — motion analysis detail">
+        <h4 style="margin-bottom:6px;">Motion Analysis — iCAMAnalyzer</h4>
+        <button class="illus-item research-panel" data-full="assets/img/figures/research-fig-d-full.png" data-caption="Figure D — Integrated Python Analysis Platform: calcium-based activation mapping and calcium-derived propagation velocity, label-free motion analysis, and parallel multi-organoid analysis. Calcium and brightfield recordings were acquired separately." aria-label="View full integrated analysis figure — motion analysis detail">
           <div class="illus-thumb"><img src="assets/img/figures/research-motion-panel.jpg" width="809" height="383" loading="lazy" decoding="async" alt="Label-free motion analysis panel showing bright-field boundary detection, area over time, and averaged contraction"></div>
         </button>
         <p class="research-panel-caption">Motion analysis detail from Figure D. Select to view the full figure.</p>
-        <p style="margin:12px 0;">Bright-field motion analysis provides a complementary mechanical readout without fluorescent labeling.</p>
+        <p style="margin:12px 0;">The label-free motion module within iCAMAnalyzer provides a complementary readout of tissue movement from brightfield recordings. Calcium and brightfield recordings in the thesis work were acquired separately.</p>
         <ul class="research-readouts">
           <li>Beating rate</li>
           <li>Contraction magnitude</li>
@@ -208,15 +210,15 @@
         <div>
           <span class="tag">Parallel acquisition</span>
           <h3>9-Organoid Recording</h3>
-          <p>Parallel acquisition across nine organoids served as a proof-of-concept for scaling functional phenotyping beyond one sample at a time.</p>
+          <p>Parallel recording and analysis across nine organoids served as a proof of concept for measuring multiple samples. This refers to parallel multi-organoid measurements, not simultaneous calcium and brightfield acquisition.</p>
           <p class="loop-tags mb-0">Parallel recording · Batch comparison · Higher-throughput phenotyping</p>
         </div>
       </div>
       <figure class="research-scale-figure">
-        <button class="illus-item research-panel" data-full="assets/img/figures/research-fig-d-full.png" data-caption="Figure D — Integrated Analysis Platform: calcium analysis, label-free motion analysis, and parallel organoid analysis" aria-label="View full integrated analysis figure — nine-organoid detail">
+        <button class="illus-item research-panel" data-full="assets/img/figures/research-fig-d-full.png" data-caption="Figure D — Integrated Python Analysis Platform: calcium-based activation mapping and calcium-derived propagation velocity, label-free motion analysis, and parallel multi-organoid analysis. Calcium and brightfield recordings were acquired separately." aria-label="View full integrated analysis figure — nine-organoid detail">
           <div class="illus-thumb"><img src="assets/img/figures/research-parallel-panel.jpg" width="808" height="383" loading="lazy" decoding="async" alt="Parallel analysis panel showing a nine-organoid bright-field array and representative calcium traces for each organoid"></div>
         </button>
-        <figcaption class="research-panel-caption">Nine-organoid array and representative calcium traces, shown as a detail from Figure D. Select to view the full figure.</figcaption>
+        <figcaption class="research-panel-caption">Nine-organoid array and representative calcium traces from Figure D illustrate multi-organoid analysis. Brightfield and calcium recordings were acquired separately. Select to view the full figure.</figcaption>
       </figure>
     </div>
 
@@ -280,7 +282,7 @@
         </div>
         <span class="tag">Imaging</span>
         <h3>Dual-Camera Functional Imaging System</h3>
-        <p>I am building a synchronized fluorescence and brightfield imaging system to capture calcium dynamics and tissue motion from the same cardiac sample. The goal is to integrate optical readouts of excitation and contraction within a single acquisition workflow.</p>
+        <p>I am developing a dual-camera system for simultaneous fluorescence and brightfield acquisition from the same cardiac sample. This ongoing hardware project aims to pair calcium dynamics and tissue motion within individual beats. It is distinct from the completed Python software integration and the parallel multi-organoid analysis workflow.</p>
         <p class="loop-tags mb-0">Fluorescence · Brightfield · Ca²⁺ imaging · Motion analysis · Optical synchronization</p>
       </div>
 
@@ -373,7 +375,7 @@
       </div>
       <div class="loop-stage">
         <h4>Electromechanical phenotype</h4>
-        <p class="loop-tags">Ca²⁺ · Conduction · Contraction · E–C coupling</p>
+        <p class="loop-tags">Ca²⁺ · Calcium-derived propagation · Contraction · E–C coupling</p>
       </div>
     </div>
     <div class="loop-arrow-row cols-3"><span>→</span><span>→</span></div>
