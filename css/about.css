@@ -1,0 +1,64 @@
+.about-intro .hero-grid { align-items: center; }
+.about-intro .about-profile-wrap { max-width: 300px; }
+.about-lead { font-size: 1.06rem; max-width: 670px; }
+.about-thread { margin: 24px 0 0; color: var(--ink); font-weight: 600; }
+.about-path { margin: 0; padding: 0; list-style: none; }
+.about-path-step {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) 280px;
+  gap: 26px;
+  align-items: start;
+  padding: 32px 0;
+  border-top: var(--border-thin);
+}
+.about-step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  color: var(--primary);
+  font-size: .75rem;
+  font-weight: 600;
+}
+.about-step-copy { min-width: 0; padding-top: 3px; }
+.about-step-copy .eyebrow { font-size: .68rem; margin-bottom: 12px; }
+.about-step-copy h3 { font-size: 1.4rem; margin-bottom: 14px; }
+.about-step-copy p { max-width: 580px; }
+.about-step-copy > a { font-size: .88rem; font-weight: 600; }
+.about-step-media { margin: 0; min-width: 0; }
+.about-step-media a { display: block; border: 0; }
+.about-step-media img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+.about-step-media .about-culture-photo { object-position: center 28%; }
+.about-step-media .about-poster-photo { object-position: center 22%; }
+.about-step-media figcaption { margin-top: 10px; font-size: .72rem; line-height: 1.5; color: var(--ink-soft); }
+.about-highlight { margin-top: 20px; font-size: .82rem; }
+.about-next { max-width: 780px; margin-top: 32px; padding: 24px 28px; background: #f4f7f5; border-left: 2px solid var(--primary); }
+.about-next .eyebrow { margin-bottom: 10px; }
+.about-note { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 36px; }
+.about-note p { max-width: 700px; }
+.about-note a { font-size: .9rem; font-weight: 600; }
+.about-travel-link { font-size: .86rem; }
+#turning-points, #before-the-bench, #beyond-the-lab { scroll-margin-top: 100px; }
+@media (max-width: 900px) {
+  .about-path-step { grid-template-columns: 36px minmax(0, 1fr) 220px; gap: 20px; }
+  .about-step-media img { height: 180px; }
+  .about-note { grid-template-columns: 210px minmax(0, 1fr); gap: 24px; }
+}
+@media (max-width: 650px) {
+  .about-path-step { grid-template-columns: 30px minmax(0, 1fr); gap: 18px; padding: 28px 0; }
+  .about-step-number { width: 28px; height: 28px; font-size: .65rem; }
+  .about-step-copy h3 { font-size: 1.25rem; }
+  .about-step-media { grid-column: 2; width: 100%; max-width: 420px; }
+  .about-step-media img { height: auto; aspect-ratio: 4 / 3; }
+  .about-note { grid-template-columns: 1fr; gap: 8px; }
+  .about-next { padding: 20px; }
+}
