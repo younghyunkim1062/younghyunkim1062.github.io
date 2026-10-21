@@ -66,7 +66,7 @@ files) and add an `active` class only on the page it points to.
   `js/travel-data.js`, pin id `biochip-jeju`); the Summer Symposium entry is now text-only. If you
   want a poster PDF linked again, add the file back under `assets/posters/` and link it the same
   way the symposium entry used to (recompress large posters by rasterizing at 150dpi with PyMuPDF).
-- **Contact links**: footer + hero buttons now use the real email (`younghyunkim@sju.ac.kr`) and
+- **Contact links**: footer + hero buttons now use the real email (`younghyun.kim1062@gmail.com`) and
   Instagram (`@yh.bioatelier`). Google Scholar / LinkedIn / GitHub were removed for now since there's
   nothing to link yet — add them back into the footer `<p>` (same pattern as Email/Instagram) once
   you have profiles worth linking.
