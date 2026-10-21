@@ -7,9 +7,13 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=20261011">
+<link rel="stylesheet" href="css/blog.css?v=20261021">
+<meta name="description" content="Places I've been, things I've made, and moments from life in the lab. Explore travel, handmade robots, organoid videos, and practical research notes.">
+<link rel="canonical" href="https://younghyunkim1062.github.io/blog.html">
 </head>
-<body>
+<body class="blog-overview">
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header class="site-header">
   <nav class="nav">
@@ -32,59 +36,81 @@
   </nav>
 </header>
 
-<section class="tight">
+<main id="main-content" class="blog-main">
   <div class="container">
-    <span class="eyebrow">Blog</span>
-    <h1>Off the Bench</h1>
-    <p style="font-size:1.05rem; max-width:720px;">Places I travel to, things I build outside the lab,
-      the odd moments the microscope catches — and a growing set of practical research notes.</p>
+    <section class="blog-masthead" aria-labelledby="blog-title">
+      <div>
+        <span class="blog-kicker">The journal · Young Hyun Kim</span>
+        <h1 id="blog-title">Off the <em>Bench.</em></h1>
+      </div>
+      <p>Places I've been, things I've made,<br class="blog-desktop-break"> and moments from life in the lab.</p>
+    </section>
 
-    <div class="blog-subnav">
-      <a href="blog.html" class="active">All</a>
-      <a href="blog-travel.html">Travel</a>
-      <a href="blog-making.html">Making</a>
-      <a href="blog-gallery.html">Under the Scope</a>
-      <a href="research-starter-kit.html">Research Starter Kit</a>
-    </div>
-  </div>
-</section>
+    <nav class="blog-topics" aria-label="Blog categories">
+      <span class="blog-browse">Explore</span>
+      <a href="blog-making.html"><span class="blog-topic-dot making-dot" aria-hidden="true"></span>Making</a>
+      <a href="blog-travel.html"><span class="blog-topic-dot travel-dot" aria-hidden="true"></span>Travel</a>
+      <a href="blog-gallery.html"><span class="blog-topic-dot scope-dot" aria-hidden="true"></span>Under the Scope</a>
+      <a href="research-starter-kit.html"><span class="blog-topic-dot notes-dot" aria-hidden="true"></span>Research Starter Kit</a>
+    </nav>
 
-<section class="tight">
-  <div class="container">
-    <div class="grid grid-2">
-      <a href="blog-travel.html#france-exchange" class="card post-card" style="color:inherit;">
-        <div class="thumb"><img src="assets/img/travel/france-exchange/group-thumb.jpg" alt="Group photo from the France exchange semester" width="640" height="480" loading="lazy" style="width:100%;height:100%;object-fit:contain;"></div>
-        <span class="tag">Travel · 1 photo</span>
-        <h3>France · Exchange Semester</h3>
-        <p class="mb-0">Open the photo album →</p>
+    <section class="blog-stories" aria-label="Explore the journal">
+      <a class="blog-story blog-story-feature" href="blog-making.html">
+        <div class="blog-story-image blog-making-image">
+          <img src="assets/img/making/carousel.jpg" alt="A handmade paper carousel with animals, LEDs, and a wired Hummingbird controller" width="900" height="675" fetchpriority="high">
+          <span class="blog-photo-label">Robotics &amp; STEAM</span>
+        </div>
+        <div class="blog-story-copy">
+          <span class="blog-kicker making-ink">Making</span>
+          <h2>Things I've made.</h2>
+          <p>Paper carousels, wooden robot cars, and ideas brought to life with circuits.</p>
+          <span class="blog-story-cta">Explore the projects <span aria-hidden="true">→</span></span>
+        </div>
       </a>
-      <a href="blog-travel.html" class="card post-card" style="color:inherit;">
-        <div class="thumb" style="background:linear-gradient(135deg, var(--sky), var(--mint));"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><path d="M12 21s7-6.8 7-12a7 7 0 1 0-14 0c0 5.2 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg> Travel map</div>
-        <span class="tag">Travel</span>
-        <h3>An interactive map of everywhere I've been</h3>
-        <p class="mb-0">Click a pin, see the photos and the story. Starting from Seoul and growing from there.</p>
+
+      <a class="blog-story blog-story-small" href="blog-travel.html#france-exchange">
+        <div class="blog-story-image blog-travel-image">
+          <img src="assets/img/travel/france-exchange/group.jpg" alt="Friends together during the 2019 exchange semester in France" width="1600" height="1200" decoding="async">
+          <span class="blog-photo-label">France · 2019</span>
+        </div>
+        <div class="blog-story-copy">
+          <span class="blog-kicker travel-ink">Travel</span>
+          <h2>A semester in France.</h2>
+          <p>A new place, and the people who made it memorable.</p>
+          <span class="blog-card-arrow" aria-hidden="true">→</span>
+        </div>
       </a>
-      <a href="blog-making.html" class="card post-card" style="color:inherit;">
-        <div class="thumb" style="background:linear-gradient(135deg, var(--mustard), var(--coral));"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><rect x="5" y="9" width="14" height="9" rx="2"/><circle cx="9" cy="13.5" r="1.2"/><circle cx="15" cy="13.5" r="1.2"/><path d="M12 9V5"/><circle cx="12" cy="4" r="1"/><path d="M3 13h2"/><path d="M19 13h2"/></svg> Making</div>
-        <span class="tag mustard">Making</span>
-        <h3>Educational robots &amp; build notes</h3>
-        <p class="mb-0">Robots and materials from robotics education, and other things I've built for fun.</p>
+
+      <a class="blog-story blog-story-small" href="blog-gallery.html">
+        <div class="blog-story-image blog-scope-image">
+          <img src="assets/img/scope/organoid-01.jpg" alt="A close-up of a cardiac organoid on a microscope display" width="640" height="1138" decoding="async">
+          <span class="blog-photo-label"><svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor" aria-hidden="true"><path d="M5 3.2 12 8l-7 4.8z"/></svg> Video gallery</span>
+        </div>
+        <div class="blog-story-copy">
+          <span class="blog-kicker scope-ink">Under the Scope</span>
+          <h2>A closer look.</h2>
+          <p>Organoids in motion, captured at the bench.</p>
+          <span class="blog-card-arrow" aria-hidden="true">→</span>
+        </div>
       </a>
-      <a href="blog-gallery.html" class="card post-card" style="color:inherit;">
-        <div class="thumb" style="background:linear-gradient(135deg, var(--mint), var(--sky));"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.3"/></svg> Under the Scope</div>
-        <span class="tag">Under the Scope</span>
-        <h3>What the microscope catches</h3>
-        <p class="mb-0">A no-caption gallery of organoids mid-beat, odd calcium waves, and other things worth a second look.</p>
-      </a>
-      <a href="research-starter-kit.html" class="card post-card" style="color:inherit;">
-        <div class="thumb" style="background:linear-gradient(135deg, var(--mint), var(--sky));"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-4px;flex-shrink:0;"><path d="M4 5.5C6.5 4.3 9.5 4.5 12 6.2 14.5 4.5 17.5 4.3 20 5.5v13c-2.5-1.2-5.5-1-8 .7-2.5-1.7-5.5-1.9-8-.7z"/><line x1="12" y1="6.2" x2="12" y2="19.7"/></svg> Research Starter Kit</div>
-        <span class="tag">For students</span>
-        <h3>Practical notes for starting experimental research</h3>
-        <p class="mb-0">Things I wish I'd known on day one — organizing experiments, reading papers, analyzing data, building figures, and writing it all up.</p>
-      </a>
-    </div>
+    </section>
+
+    <section class="blog-notes" aria-labelledby="blog-notes-title">
+      <div class="blog-notes-intro">
+        <span class="blog-kicker">Notes to share · For students</span>
+        <h2 id="blog-notes-title">Research Starter Kit</h2>
+        <p>Practical notes I wish I'd had on my first day in the lab.</p>
+        <a class="blog-notes-link" href="research-starter-kit.html">Open the notebook <span aria-hidden="true">→</span></a>
+      </div>
+      <nav class="blog-notes-index" aria-label="Research Starter Kit topics">
+        <a href="research-starter-kit.html#start"><span class="blog-note-number" aria-hidden="true">01</span><span>Plan an experiment</span><span aria-hidden="true">→</span></a>
+        <a href="research-starter-kit.html#read"><span class="blog-note-number" aria-hidden="true">02</span><span>Read &amp; connect ideas</span><span aria-hidden="true">→</span></a>
+        <a href="research-starter-kit.html#analyze"><span class="blog-note-number" aria-hidden="true">03</span><span>Analyze &amp; visualize</span><span aria-hidden="true">→</span></a>
+        <a href="research-starter-kit.html#write"><span class="blog-note-number" aria-hidden="true">04</span><span>Write &amp; communicate</span><span aria-hidden="true">→</span></a>
+      </nav>
+    </section>
   </div>
-</section>
+</main>
 
 <footer class="site-footer">
   <div class="container">
@@ -106,6 +132,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=20261011"></script>
 </body>
 </html>
