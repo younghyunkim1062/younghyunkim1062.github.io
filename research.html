@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Research — Young Hyun Kim</title>
-<link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/style.css?v=20261011" rel="stylesheet"/>
-<link href="css/research.css" rel="stylesheet"/>
-<meta content="Cardiac organoid models, iCAMAnalyzer validation, calcium-derived measurements, and ongoing synchronized calcium–brightfield imaging by Young Hyun Kim." name="description"/><meta content="Research — Young Hyun Kim" property="og:title"/><meta content="Cardiac organoid models, iCAMAnalyzer validation, calcium-derived measurements, and ongoing synchronized calcium–brightfield imaging by Young Hyun Kim." property="og:description"/><meta content="website" property="og:type"/><meta content="https://younghyunkim1062.github.io/research.html" property="og:url"/><link href="https://younghyunkim1062.github.io/research.html" rel="canonical"/><style>.nav-links > .has-dropdown{display:flex;flex-wrap:wrap;align-items:center}.nav-links > .has-dropdown > .dropdown{flex-basis:100%}</style></head>
-<body><a class="skip-link" href="#main-content">Skip to content</a>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="css/style.css?v=20261011"><link rel="stylesheet" href="css/research.css?v=20261022">
+<meta name="description" content="Cardiac organoid research, iCAMAnalyzer Python analysis software, and synchronized calcium–brightfield imaging by Young Hyun Kim."><meta property="og:title" content="Research — Young Hyun Kim">
+<meta property="og:description" content="Cardiac organoid research, iCAMAnalyzer Python analysis software, and synchronized calcium–brightfield imaging by Young Hyun Kim."><meta property="og:type" content="website">
+<meta property="og:url" content="https://younghyunkim1062.github.io/research.html"><link rel="canonical" href="https://younghyunkim1062.github.io/research.html">
+</head><body class="research-site"><a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
 <nav class="nav">
 <a class="brand" href="index.html"><span class="badge"><span>YK</span></span>Young Hyun Kim</a>
@@ -31,51 +29,11 @@
 <li><a class="nav-link" href="assets/CV_Younghyun_Kim.pdf" rel="noopener" target="_blank">CV</a></li>
 </ul>
 </nav>
-</header><main id="main-content">
-<section class="tight"><div class="container research-intro">
-<span class="eyebrow">Research · Cardiac tissue engineering &amp; quantitative physiology</span>
-<h1>Connecting cardiac identity with calcium dynamics and contraction.</h1>
-<p class="lead">I build human cardiac organoid models and develop tools to measure how they function. My work brings together stem-cell culture, imaging, and quantitative analysis to ask how atrial- and ventricular-like tissues differ—and what those measurements can actually tell us.</p>
-<nav aria-label="Research sections" class="research-jumps"><a href="#models">Cardiac models</a><a href="#icamanalyzer">iCAMAnalyzer</a><a href="#findings">Findings</a><a href="#imaging">Ongoing imaging</a></nav>
-</div></section>
-<section class="bg-tint tight" id="models"><div class="container">
-<span class="status-label">Completed M.S. work</span><h2>Do chamber-associated identities produce distinct functional phenotypes?</h2>
-<div class="evidence-grid"><div><p>I developed atrial- and ventricular-like cardiac organoids using Wnt and retinoic-acid modulation, with optimization of cell seeding and aggregation. The workflow begins with hiPSC culture in 2D; embryoid-body formation marks the transition to 3D, followed by cardiac differentiation in 3D.</p>
-<p>I used qRT-PCR to assess chamber-associated markers and flow cytometry to assess cardiomyocyte identity in monolayer cultures, alongside immunofluorescence in 3D tissues. These measurements supported tissue characterization; functional imaging then tested whether the groups also differed in calcium dynamics and contraction.</p>
-<a href="protocols.html">Methods &amp; workflows →</a></div>
-<figure class="asset-placeholder"><span class="placeholder-label">Figure to be added</span><h3>From hiPSCs to cardiac organoids</h3><p>2D hiPSC culture → 3D embryoid bodies → 3D cardiac differentiation</p><figcaption>Add the actual workflow schematic and representative atrial-/ventricular-like tissue images, with differentiation day, marker labels, and scale bars.</figcaption></figure></div>
-</div></section>
-<section class="tight" id="icamanalyzer"><div class="container">
-<span class="status-label">Software integration &amp; synthetic validation completed</span><h2>iCAMAnalyzer</h2><p class="lead">An integrated Python platform for calcium-transient analysis, calcium-based activation mapping, and label-free tissue-motion analysis.</p>
-<p class="reading-copy">I developed iCAMAnalyzer to connect complementary functional readouts within one analysis workflow. I integrated the earlier analysis modules into Python and evaluated how acquisition and processing choices affect the measurements.</p>
-<div class="grid grid-3">
-<article class="card"><span class="eyebrow">01 · Calcium kinetics</span><h3>How does a beat evolve?</h3><p>Fluorescence traces describe transient timing and duration. Beat detection adapts to estimated beating frequency to support comparison across recordings.</p></article>
-<article class="card"><span class="eyebrow">02 · Calcium propagation</span><h3>How does activation spread?</h3><p>Pixelwise timing from the calcium upstroke produces calcium-based activation maps. Local polynomial fitting estimates calcium-derived propagation velocity and direction.</p></article>
-<article class="card"><span class="eyebrow">03 · Tissue motion</span><h3>How does tissue move?</h3><p>Label-free brightfield analysis characterizes beat timing and contraction duration. Motion provides a complementary readout of tissue function.</p></article>
-</div>
-<p class="evidence-note"><strong>Measurement scope:</strong> Calcium-derived propagation velocity describes the spread of the calcium signal. It is not a direct measurement of electrical conduction velocity.</p>
-<div class="evidence-grid">
-<figure class="asset-placeholder"><span class="placeholder-label">Screenshot to be added</span><h3>The current Python interface</h3><figcaption>Add an authentic iCAMAnalyzer screenshot showing the input recording, selected region, and analysis output. Include the software version and explain each visible panel.</figcaption></figure>
-<div><h3>Validating the measurement itself</h3><p>I generated synthetic videos with known propagation velocities and evaluated the effects of frame rate, noise, and spatial resolution. I also checked activation estimates against experimental videos frame by frame.</p><p>This work helped identify when an apparent functional difference might instead reflect the measurement process. I additionally tested the motion workflow on organoid samples from a collaborating group at Konkuk University.</p>
-<details class="content-needed"><summary>Validation figure to add</summary><p>Measured versus ground-truth velocity, error definition, tested velocity range, frame rate, pixel size, noise levels, and number of synthetic videos. Report performance within those conditions.</p></details></div></div>
-</div></section>
-<section class="bg-tint tight" id="findings"><div class="container">
-<span class="status-label">M.S. observations</span><h2>Functional differences were readout-dependent.</h2>
-<div class="finding-list"><article><h3>Calcium kinetics</h3><p>Atrial-like organoids showed faster, shorter calcium transients, while ventricular-like organoids showed more prolonged transients in the evaluated recordings.</p></article><article><h3>Tissue motion</h3><p>Beat rate and contraction duration also differed between the groups, providing complementary functional information.</p></article><article><h3>Calcium-derived propagation</h3><p>The comparison did not detect a statistically significant difference in calcium-derived propagation velocity. This result does not establish equivalence between the groups.</p></article></div>
-<figure class="asset-placeholder compact"><span class="placeholder-label">Results figure to be added</span><figcaption>Add representative traces and group-level plots. Specify independent differentiations, organoids per group, analysis unit, recording conditions, statistical tests, and uncertainty.</figcaption></figure>
-<p class="reading-copy">These observations motivated a closer look at the relationship between calcium dynamics and contraction. Separate recordings can describe each phenotype, but resolving their timing within the same beat requires synchronized acquisition.</p>
-</div></section>
-<section class="tight" id="imaging"><div class="container">
-<span class="eyebrow">From analysis software to measurement hardware</span><h2>Two distinct extensions of the platform</h2>
-<div class="grid grid-2"><article class="card"><span class="status-label">Proof of concept completed</span><h3>Parallel multi-organoid analysis</h3><p>A micropillar-assisted, nine-organoid proof of concept extends the analysis to multiple tissues. Parallel analysis here refers to multiple organoids; calcium and brightfield recordings were acquired separately.</p><details class="content-needed"><summary>Platform image to add</summary><p>Add the real micropillar-array image and annotated organoid regions. Include dimensions and acquisition details.</p></details></article>
-<article class="card"><span class="status-label ongoing">Hardware in development</span><h3>Synchronized calcium–brightfield imaging</h3><p>I am developing a dual-camera microscope to record calcium fluorescence and brightfield motion simultaneously. The goal is to relate calcium dynamics to contraction within the same beat.</p><p>Hardware integration and timing validation are ongoing. The completed software integration does not yet establish synchronized imaging performance.</p><details class="content-needed"><summary>Hardware figure to add</summary><p>Add a current setup photo or optical schematic. Include synchronization measurements only after they have been collected and checked.</p></details></article></div>
-</div></section>
-<section class="bg-tint tight"><div class="container reading-copy">
-<span class="status-label ongoing">Future research direction</span><h2>When does the relationship between activation and contraction change?</h2>
-<p>I want to use synchronized measurements to study how chamber identity, mechanical loading, and disease-associated perturbations change the relationship between electrical activity, calcium handling, and contraction.</p><p>A longer-term question is whether tissue motion contains enough information to estimate selected features of calcium dynamics. I view this as a hypothesis to test against paired measurements, with explicit limits on what can be inferred.</p>
-<p>Related work in development includes geometry-based simulations, stretch and pacing systems, and integration with microelectrode-array measurements. These are tools for future mechanistic studies, rather than established findings.</p>
-<div class="btn-row"><a class="btn btn-primary" href="publications.html">Publications</a><a class="btn btn-outline" href="mailto:younghyun.kim1062@gmail.com">Discuss research</a></div>
-</div></section></main>
+</header>
+<main id="main-content"><div class="container"><section class="r-hero" aria-labelledby="research-title"><div><span class="r-kicker">Cardiac tissue engineering · Quantitative physiology</span><h1 id="research-title">Engineering cardiac models.<br><em>Measuring how they function.</em></h1><p>I build human cardiac organoids and develop analysis tools to connect tissue identity with calcium dynamics and contraction.</p><div class="r-actions"><a href="#selected-work">Explore the research ↓</a><a href="assets/theses/Younghyun_Kim_Masters_Thesis_2026.pdf" target="_blank" rel="noopener">Master’s thesis ↗</a></div></div><figure><video controls autoplay muted loop playsinline preload="metadata" poster="assets/img/research/beating-tissue-poster.jpg" aria-label="Representative brightfield recording of beating human iPSC-derived cardiac tissue"><source src="assets/video/heart-organoid.webm" type="video/webm"><source src="assets/video/heart-organoid.mp4" type="video/mp4">Your browser does not support video. <a href="assets/video/heart-organoid.mp4">Open the recording</a>.</video><figcaption>Human iPSC-derived cardiac tissue · Representative brightfield recording</figcaption></figure></section><section class="r-selected" id="selected-work" aria-labelledby="selected-title"><div class="r-section-head"><h2 id="selected-title">Selected research</h2><p>From tissue models to analysis tools</p></div><div class="r-projects">
+<article class="r-project" id="models"><a class="r-project-media" href="research-organoids.html" aria-label="Read the cardiac organoid project"><img src="assets/img/research/organoid-structure.jpg" alt="cTnT and alpha-actinin immunofluorescence in ventricular-like and atrial-like cardiac organoids" width="1400" height="800" decoding="async"></a><div class="r-project-copy"><span class="r-kicker">Experimental research · M.S. thesis</span><h3>Chamber-specific<br>cardiac organoids</h3><p>How does chamber-associated identity relate to the way a tissue handles calcium and contracts?</p><p class="r-role"><strong>My contribution</strong> · Culture and differentiation, tissue characterization, functional imaging, and quantitative analysis.</p><a class="r-project-link" href="research-organoids.html">Explore the research story <span aria-hidden="true">→</span></a></div></article>
+<article class="r-project" id="icamanalyzer"><a class="r-project-media" href="icamanalyzer.html" aria-label="Explore iCAMAnalyzer"><img src="assets/img/research/icamanalyzer-calcium-20261021.png" alt="iCAMAnalyzer Python interface displaying a synthetic calcium-analysis demo" width="1440" height="920" decoding="async"></a><div class="r-project-copy"><span class="r-kicker">Research software · Python</span><h3>iCAMAnalyzer</h3><p>Calcium-transient analysis, calcium-based activation mapping, and label-free tissue-motion analysis in one application.</p><p class="r-caption">20261021 UI version · Synthetic demo shown</p><p class="r-role"><strong>My contribution</strong> · Analysis workflow development, module integration, and evaluation of measurement sensitivity.</p><a class="r-project-link" href="icamanalyzer.html">Explore the software <span aria-hidden="true">→</span></a></div></article>
+</div><div id="findings" class="r-actions"><a href="research-organoids.html#findings">Selected experimental findings →</a></div></section><section class="r-current" id="imaging"><div class="r-current-grid"><div><span class="r-kicker">Current work · Hardware in development</span><h2>Connecting calcium<br>with contraction.</h2><p>I am developing a dual-camera microscope for synchronized fluorescence and brightfield imaging. The goal is to resolve the relationship between calcium dynamics and tissue motion within the same beat.</p><p>Optical integration and timing validation are ongoing.</p></div><div class="r-placeholder " id="setup-placeholder"><span class="r-kicker">To be added · R1</span><h3>Synchronized imaging setup</h3><p>A current setup photo or annotated optical layout will be added here.</p><details><summary>Materials needed</summary><p>An overview photo; labeled fluorescence and brightfield paths; camera and trigger connections. Add a paired recording and measured timing offset when available.</p></details></div></div><div class="r-future"><span class="r-kicker">Next questions</span><p>How do chamber identity and mechanical loading change calcium–contraction timing? Can label-free motion estimate selected calcium features? Geometry-based simulations, pacing, and microelectrode-array measurements are directions for future mechanistic studies.</p></div></section><nav class="r-resources" aria-label="Research resources"><span class="r-kicker">Explore further</span><a href="protocols.html">Methods &amp; workflows →</a><a href="figures.html">Figures &amp; illustration →</a><a href="publications.html">Publications →</a></nav></div></main>
 <footer class="site-footer">
 <div class="container">
 <div class="footer-grid">
@@ -90,14 +48,6 @@
 </div>
 <div class="footer-note">© 2026 Young Hyun Kim</div>
 </div>
-</footer>
-<div id="lightbox">
-<button aria-label="Close" class="lightbox-close">×</button>
-<div style="display:flex; flex-direction:column; align-items:center;">
-<img alt="" src=""/>
-<p class="lightbox-caption"></p>
-</div>
-</div>
-<script src="js/main.js?v=20261011"></script>
-</body>
-</html>
+</footer><div id="lightbox"><button aria-label="Close image" class="lightbox-close">×</button><div style="display:flex;flex-direction:column;align-items:center;"><img alt="Enlarged research figure"><p class="lightbox-caption"></p></div></div>
+<script src="js/main.js?v=20261011"></script><script src="js/research.js?v=20261022"></script>
+</body></html>
