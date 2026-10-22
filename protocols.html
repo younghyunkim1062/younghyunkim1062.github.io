@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Methods &amp; Workflows — Young Hyun Kim</title>
-<link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/style.css?v=20261011" rel="stylesheet"/>
-<meta content="Methods for cardiac organoid generation, calcium and motion analysis, and multi-organoid phenotyping." name="description"/><meta content="Methods &amp; Workflows — Young Hyun Kim" property="og:title"/><meta content="Methods for cardiac organoid generation, calcium and motion analysis, and multi-organoid phenotyping." property="og:description"/><meta content="website" property="og:type"/><meta content="https://younghyunkim1062.github.io/protocols.html" property="og:url"/><link href="https://younghyunkim1062.github.io/protocols.html" rel="canonical"/><style>.nav-links > .has-dropdown{display:flex;flex-wrap:wrap;align-items:center}.nav-links > .has-dropdown > .dropdown{flex-basis:100%}</style></head>
-<body><a class="skip-link" href="#main-content">Skip to content</a>
+<meta name="description" content="Experimental skills in practice: cardiac differentiation in 2D and 3D, molecular characterization, functional imaging, and experimental fabrication.">
+<meta property="og:title" content="Methods &amp; Workflows — Young Hyun Kim"><meta property="og:description" content="Experimental skills in practice: cardiac differentiation in 2D and 3D, molecular characterization, functional imaging, and experimental fabrication."><meta property="og:type" content="website">
+<meta property="og:url" content="https://younghyunkim1062.github.io/protocols.html"><link rel="canonical" href="https://younghyunkim1062.github.io/protocols.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="css/style.css?v=20261011"><link rel="stylesheet" href="css/methods.css?v=20261022">
+</head><body class="methods-site"><a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
 <nav class="nav">
 <a class="brand" href="index.html"><span class="badge"><span>YK</span></span>Young Hyun Kim</a>
@@ -30,63 +28,92 @@
 <li><a class="nav-link" href="assets/CV_Younghyun_Kim.pdf" rel="noopener" target="_blank">CV</a></li>
 </ul>
 </nav>
-</header><main id="main-content">
-<section class="tight">
-<div class="container">
-<span class="eyebrow">Research › Methods &amp; Workflows</span>
-<h1>Methods &amp; Workflows</h1>
-<p style="font-size:1.05rem; max-width:720px;">An overview of the models, analysis tools, and measurement workflows behind my research. Completed methods and ongoing hardware development are identified separately. Please contact me to discuss methodological details or collaboration.</p>
-</div>
+</header>
+<main id="main-content"><div class="container">
+<section class="m-hero" aria-labelledby="methods-title">
+<a class="m-back" href="research.html">← Research overview</a>
+<span class="m-kicker">From cell culture to functional measurements</span>
+<h1 id="methods-title">Methods &amp; Workflows</h1>
+<p class="m-subtitle">Experimental skills <em>in practice.</em></p>
+<p class="m-intro">Hands-on workflows in cell and tissue engineering, molecular characterization, functional imaging, and experimental fabrication. Each case connects a method with representative evidence, my contribution, and the checks used to interpret the result.</p>
+<div class="m-actions"><a href="assets/CV_Younghyun_Kim.pdf" target="_blank" rel="noopener">View CV ↗</a><a href="#materials-guide">Material checklist ↓</a></div>
 </section>
-<section class="tight">
-<div class="container">
-<div class="grid grid-2">
-<div class="protocol-card">
-<span class="lock"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" style="display:inline-block;vertical-align:-4px;flex-shrink:0;" viewbox="0 0 24 24" width="14"><rect height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></svg> Full protocol on request</span>
-<h3>Chamber-Specific Cardiomyocyte Differentiation</h3>
-<p>hiPSCs are cultured in 2D before embryoid-body formation and subsequent cardiac differentiation in 3D. Wnt and retinoic-acid modulation support atrial- and ventricular-like tissue generation. Characterization includes qRT-PCR and flow cytometry in monolayer cultures, alongside immunofluorescence in 3D tissues.</p>
-<details class="content-needed"><summary>Characterization data to add</summary><p>Add marker panels and quantitative data with differentiation day, independent batches, gating strategy, and the source culture format.</p></details>
-</div>
-<div class="protocol-card">
-<span class="lock"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" style="display:inline-block;vertical-align:-4px;flex-shrink:0;" viewbox="0 0 24 24" width="14"><rect height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></svg> Full protocol on request</span>
-<h3>iCAMAnalyzer — Integrated Python Analysis Platform</h3>
-<p>An integrated Python platform combining calcium-transient analysis, calcium-based activation mapping, and label-free motion analysis. The calcium modules support ΔF/F₀ normalization, ensemble-averaged kinetics, beat-to-beat analysis, pixelwise activation timing, and calcium-derived propagation velocity estimation.</p>
-<p class="subtle mb-0">Validation used synthetic videos with known propagation velocities, including assessment of frame rate, noise, and spatial resolution, plus frame-by-frame checks against experimental recordings. Calcium-derived propagation velocity is not a direct measurement of electrical conduction velocity.</p>
-</div>
-<div class="protocol-card">
-<span class="lock"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" style="display:inline-block;vertical-align:-4px;flex-shrink:0;" viewbox="0 0 24 24" width="14"><rect height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></svg> Full protocol on request</span>
-<h3>Parallel Multi-Organoid Analysis</h3>
-<p>The Python analysis workflow supports parallel analysis across multiple organoids, including a nine-organoid proof of concept, with automated ROI detection and manual correction. Calcium and brightfield recordings are analyzed as separate acquisitions; parallel analysis refers to multiple organoids, not simultaneous calcium–brightfield imaging.</p>
-<p class="subtle mb-0">Synchronized calcium–brightfield acquisition is a separate dual-camera hardware project currently under development.</p>
-</div>
-<div class="protocol-card">
-<span class="lock"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" style="display:inline-block;vertical-align:-4px;flex-shrink:0;" viewbox="0 0 24 24" width="14"><rect height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></svg> Full protocol on request</span>
-<h3>Organoid Diameter Analyzer</h3>
-<p>Custom MATLAB tool for automated organoid diameter measurement from brightfield images,
-          cross-validated against manual measurement.</p>
-<p class="subtle mb-0">Validated via Bland–Altman and correlation analysis (GraphPad Prism).</p>
-</div>
-<div class="protocol-card">
-<span class="lock"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" style="display:inline-block;vertical-align:-4px;flex-shrink:0;" viewbox="0 0 24 24" width="14"><rect height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></svg> Full protocol on request</span>
-<h3>3D Skeletal Muscle Tissue Engineering</h3>
-<p>Fabrication of 3D skeletal muscle tissue on custom scaffolds, with assessment of contractile
-          function and calcium-signal propagation.</p>
-</div>
-<div class="protocol-card">
-<span class="lock"><svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" style="display:inline-block;vertical-align:-4px;flex-shrink:0;" viewbox="0 0 24 24" width="14"><rect height="9" rx="2" width="14" x="5" y="11"></rect><path d="M8 11V7.5a4 4 0 0 1 8 0V11"></path></svg> Full protocol on request</span>
-<h3>Microfluidic Chip Simulation Workflow</h3>
-<p>COMSOL Multiphysics simulation setup for fluid velocity and electric-potential fields in
-          microfluidic chips used for tissue culture and stimulation.</p>
-</div>
-</div>
-<div class="card text-center" style="margin-top:36px;">
-<h3 class="mb-0">Want the full protocol?</h3>
-<p>Email me and let me know which one — happy to discuss collaboration, replication, or use in your own lab.</p>
-<a class="btn btn-primary" href="mailto:younghyun.kim1062@gmail.com?subject=Protocol%20request">Request a protocol</a>
-</div>
-</div>
+<nav class="m-index" aria-label="Methods areas">
+<a href="#cell-tissue"><span>01</span>Cell &amp; tissue<br>engineering</a>
+<a href="#characterization"><span>02</span>Molecular &amp; cellular<br>characterization</a>
+<a href="#functional-imaging"><span>03</span>Imaging &amp; functional<br>measurements</a>
+<a href="#design-fabrication"><span>04</span>Experimental design<br>&amp; fabrication</a>
+</nav>
+<p class="m-status"><span aria-hidden="true"></span>Selected examples are being documented. Numbered placeholders mark the figures, recordings, and case notes to be added.</p>
+<section class="m-area" id="cell-tissue"><div class="m-area-head"><span class="m-area-number" aria-hidden="true">01</span><div><span class="m-kicker">Experimental practice · 01</span><h2>Cell &amp; Tissue Engineering</h2><p>My work spans hiPSC culture, cardiac differentiation, 3D organoid formation, and C2C12-based skeletal muscle tissue engineering.</p><p class="m-skills"><strong>Skills in practice</strong> · hiPSC culture · Cardiac differentiation · 3D tissue engineering</p></div></div><div class="m-case-heading"><span class="m-kicker">Featured workflow</span><h3>Cardiac differentiation in 2D and 3D</h3><p>Two culture formats, documented from cell preparation through phenotype assessment.</p></div><div class="m-grid m-grid-two"><article class="m-slot" id="m1a">
+<div class="m-slot-top"><span class="m-id">M1A</span><span class="m-pending">Evidence to be added</span></div>
+<h4>2D cardiac differentiation</h4><p>hiPSC culture, monolayer differentiation, and the resulting cardiac cells.</p>
+<div class="m-media-space" aria-label="Placeholder for 2D cardiac differentiation"><span class="m-media-mark" aria-hidden="true">＋</span><span>Image sequence + representative video</span></div>
+<details><summary>Materials to add</summary><ul><li>A short image sequence covering hiPSC culture, differentiation, and the final monolayer; label each time point.</li><li>One representative beating video, with differentiation day, cell line, frame rate, and scale calibration.</li><li>Link the corresponding flow-cytometry or qRT-PCR example below. Identify independent differentiation batches.</li></ul></details>
+</article><article class="m-slot" id="m1b">
+<div class="m-slot-top"><span class="m-id">M1B</span><span class="m-pending">Evidence to be added</span></div>
+<h4>3D cardiac organoid generation</h4><p>Early 2D differentiation, aggregation, and formation of 3D cardiac tissues.</p>
+<div class="m-media-space" aria-label="Placeholder for 3D cardiac organoid generation"><span class="m-media-mark" aria-hidden="true">＋</span><span>Formation sequence + representative video</span></div>
+<details><summary>Materials to add</summary><ul><li>Images of early differentiation, aggregation, and formed organoids, with time points and scale bars.</li><li>Representative atrial-like and ventricular-like tissue videos where available; label tissue type and acquisition conditions.</li><li>Organoid size or morphology summaries if available, with the number of organoids and independent batches. Link the 3D staining example below.</li></ul></details>
+</article></div><p class="m-context">Each result will identify its source culture format. The 3D workflow includes an early 2D stage; monolayer purity measurements will be labeled as monolayer results.</p><div class="m-grid m-grid-two m-supporting"><article class="m-slot m-slot-compact" id="m1c">
+<div class="m-slot-top"><span class="m-id">M1C</span><span class="m-pending">Evidence to be added</span></div>
+<h4>Batch consistency &amp; optimization</h4><p>A documented example of an experimental adjustment and its outcome.</p>
+<div class="m-media-space" aria-label="Placeholder for Batch consistency &amp; optimization"><span class="m-media-mark" aria-hidden="true">＋</span><span>Process-development example</span></div>
+<details><summary>Materials to add</summary><ul><li>One actual issue encountered during culture, differentiation, or aggregation.</li><li>The change made, why it was chosen, and comparable before-and-after images or batch summaries.</li><li>The observation used to judge improvement, any remaining limitation, and the steps personally performed.</li></ul></details>
+</article><article class="m-slot m-slot-compact" id="m1d">
+<div class="m-slot-top"><span class="m-id">M1D</span><span class="m-pending">Evidence to be added</span></div>
+<h4>3D skeletal muscle tissue engineering</h4><p>A supporting case from C2C12-based tissue engineering.</p>
+<div class="m-media-space" aria-label="Placeholder for 3D skeletal muscle tissue engineering"><span class="m-media-mark" aria-hidden="true">＋</span><span>Additional tissue-system example</span></div>
+<details><summary>Materials to add</summary><ul><li>A scaffold or tissue-formation image and a representative later-stage image or video.</li><li>Cell type, culture day, scaffold context, and any mechanical-stimulation conditions used.</li><li>Describe personal responsibilities and the observations used to assess tissue formation or function.</li></ul></details>
+</article></div><a class="m-related" href="research-organoids.html">Related study · Chamber-specific cardiac organoids →</a></section><section class="m-area" id="characterization"><div class="m-area-head"><span class="m-area-number" aria-hidden="true">02</span><div><span class="m-kicker">Experimental practice · 02</span><h2>Molecular &amp; Cellular Characterization</h2><p>I use qRT-PCR and flow cytometry to characterize monolayer cultures, alongside immunofluorescence to examine marker expression and structure in 3D tissues.</p><p class="m-skills"><strong>Skills in practice</strong> · qRT-PCR · Flow cytometry · Immunofluorescence · Confocal microscopy</p></div></div><div class="m-grid m-grid-three"><article class="m-slot" id="m2a">
+<div class="m-slot-top"><span class="m-id">M2A</span><span class="m-pending">Evidence to be added</span></div>
+<h3>Flow cytometry</h3><p>A representative cTnT analysis from monolayer-derived cells.</p>
+<div class="m-media-space" aria-label="Placeholder for Flow cytometry"><span class="m-media-mark" aria-hidden="true">＋</span><span>Gating sequence + control + summary</span></div>
+<details><summary>Materials to add</summary><ul><li>An exported gating sequence and the control used to define the positive population.</li><li>A representative result plus a batch-level summary if available; define the denominator for each reported percentage.</li><li>Sample source, differentiation day, cell line, independent batch count, and the steps performed personally or jointly.</li></ul></details>
+</article><article class="m-slot" id="m2b">
+<div class="m-slot-top"><span class="m-id">M2B</span><span class="m-pending">Evidence to be added</span></div>
+<h3>qRT-PCR</h3><p>A selected marker-expression example with its normalization and replicate structure.</p>
+<div class="m-media-space" aria-label="Placeholder for qRT-PCR"><span class="m-media-mark" aria-hidden="true">＋</span><span>Marker panel + quantitative result</span></div>
+<details><summary>Materials to add</summary><ul><li>A clear marker-expression plot and its underlying summary table.</li><li>Sample format, cell line, differentiation day, reference gene, comparison group, and normalization method.</li><li>Separate biological and technical replicates; identify error bars and statistical tests where used. State personal responsibilities.</li></ul></details>
+</article><article class="m-slot" id="m2c">
+<div class="m-slot-top"><span class="m-id">M2C</span><span class="m-pending">Evidence to be added</span></div>
+<h3>Immunofluorescence &amp; confocal imaging</h3><p>Representative tissue structure and marker localization in 3D organoids.</p>
+<div class="m-media-space" aria-label="Placeholder for Immunofluorescence &amp; confocal imaging"><span class="m-media-mark" aria-hidden="true">＋</span><span>Individual channels + merge + control</span></div>
+<details><summary>Materials to add</summary><ul><li>Individual fluorescence channels and a merged image with marker labels and scale bars.</li><li>A relevant control, if acquired, and representative image-selection or quantification criteria.</li><li>Tissue type, differentiation day, optical section or projection, sample count, and responsibilities for staining, imaging, and analysis.</li></ul></details>
+</article></div><p class="m-context">Case notes will identify controls, sample preparation, biological and technical replicates, and the steps performed independently or with collaborators.</p></section><section class="m-area" id="functional-imaging"><div class="m-area-head"><span class="m-area-number" aria-hidden="true">03</span><div><span class="m-kicker">Experimental practice · 03</span><h2>Imaging &amp; Functional Measurements</h2><p>My functional-imaging work connects fluorescence and brightfield recordings with region-based signal extraction and quantitative analysis.</p><p class="m-skills"><strong>Skills in practice</strong> · Fluo-4 imaging · Calcium activation mapping · Brightfield motion analysis · ImageJ / Python / MATLAB</p></div></div><div class="m-grid m-grid-two"><article class="m-slot" id="m3a">
+<div class="m-slot-top"><span class="m-id">M3A</span><span class="m-pending">Evidence to be added</span></div>
+<h3>Calcium imaging</h3><p>An acquisition-to-analysis example using a real fluorescence recording.</p>
+<div class="m-media-space" aria-label="Placeholder for Calcium imaging"><span class="m-media-mark" aria-hidden="true">＋</span><span>Source video → ROI → calcium trace</span></div>
+<details><summary>Materials to add</summary><ul><li>One representative Fluo-4 recording, the selected ROI, and its extracted calcium trace.</li><li>Frame rate, exposure, pixel calibration, differentiation day, and pacing or drug conditions where applicable.</li><li>Explain the background/baseline treatment, checks for bleaching or motion artifacts, and personal acquisition and analysis roles.</li></ul></details>
+</article><article class="m-slot" id="m3b">
+<div class="m-slot-top"><span class="m-id">M3B</span><span class="m-pending">Evidence to be added</span></div>
+<h3>Brightfield motion analysis</h3><p>A representative tissue-motion workflow with inspectable tracking and outputs.</p>
+<div class="m-media-space" aria-label="Placeholder for Brightfield motion analysis"><span class="m-media-mark" aria-hidden="true">＋</span><span>Source video → tracking → motion trace</span></div>
+<details><summary>Materials to add</summary><ul><li>One brightfield recording, an ROI or tracking overlay, and the corresponding signal and exported results.</li><li>Frame rate, pixel calibration, tissue identity, and recording conditions.</li><li>Show how tissue motion was distinguished from stage drift or tracking failure. Define the reported signal and units, and state personal responsibilities.</li></ul></details>
+</article></div><p class="m-context">Calcium and brightfield examples represent separate acquisitions unless a synchronized recording is explicitly identified. Image-derived motion is reported with its signal definition and calibration.</p><a class="m-related" href="icamanalyzer.html">Analysis software · iCAMAnalyzer, interface and source code →</a></section><section class="m-area" id="design-fabrication"><div class="m-area-head"><span class="m-area-number" aria-hidden="true">04</span><div><span class="m-kicker">Experimental practice · 04</span><h2>Experimental Design &amp; Fabrication</h2><p>I develop experimental supports and measurement setups, connecting design requirements with fabrication and use at the bench.</p><p class="m-skills"><strong>Skills in practice</strong> · Rhino · FDM / SLA 3D printing · Laser cutting · Experimental integration</p></div></div><div class="m-grid m-grid-two"><article class="m-slot" id="m4a">
+<div class="m-slot-top"><span class="m-id">M4A</span><span class="m-pending">Evidence to be added</span></div>
+<h3>From CAD to an experimental component</h3><p>A concrete example of a scaffold, holder, or culture component.</p>
+<div class="m-media-space" aria-label="Placeholder for From CAD to an experimental component"><span class="m-media-mark" aria-hidden="true">＋</span><span>CAD → fabricated part → use in an experiment</span></div>
+<details><summary>Materials to add</summary><ul><li>A CAD view, a photograph of the fabricated component, and an image showing its experimental use.</li><li>Relevant dimensions and the fabrication method used: FDM/SLA printing or laser cutting, as applicable.</li><li>Explain the design requirement, one design decision or revision, and which design, fabrication, and assembly steps were personally completed.</li></ul></details>
+</article><article class="m-slot" id="m4b">
+<div class="m-slot-top"><span class="m-id">M4B</span><span class="m-pending">Evidence to be added</span></div>
+<h3>Imaging &amp; stimulation hardware</h3><p>An ongoing-development case with clearly identified completed and pending steps.</p>
+<div class="m-media-space" aria-label="Placeholder for Imaging &amp; stimulation hardware"><span class="m-media-mark" aria-hidden="true">＋</span><span>Setup photograph + annotated layout</span></div>
+<details><summary>Materials to add</summary><ul><li>An overview photo and an annotated optical or stimulation-system layout.</li><li>The current build status, personal design and integration responsibilities, and completed checks.</li><li>For synchronized imaging, add timing-validation data when available. Any COMSOL example should include geometry, boundary conditions, assumptions, and validation status.</li></ul></details>
+</article></div><p class="m-context">Hardware examples will distinguish built components, completed checks, and planned measurements. Supporting simulations can be added with their assumptions and validation status.</p><a class="m-related" href="research.html#imaging">Current development · Synchronized fluorescence–brightfield imaging →</a></section><section class="m-guide" id="materials-guide" aria-labelledby="guide-title">
+<div class="m-guide-head"><div><span class="m-kicker">Completing the case studies</span><h2 id="guide-title">The context behind every figure.</h2><p>A short case note will accompany each selected example.</p></div><a class="btn btn-outline" href="assets/methods/Methods_Materials_Checklist_20261022.txt" download>Download checklist · 한국어 ↓</a></div>
+<dl class="m-case-notes">
+<div><dt>Purpose</dt><dd>The experimental question and what this method was intended to establish.</dd></div>
+<div><dt>My contribution</dt><dd>The steps I performed, developed, analyzed, or completed jointly.</dd></div>
+<div><dt>Representative evidence</dt><dd>A figure or recording with sample identity, acquisition details, and replicate information.</dd></div>
+<div><dt>Quality checks</dt><dd>The controls, selection criteria, and checks actually used to assess the result.</dd></div>
+<div><dt>Troubleshooting</dt><dd>One documented issue, the adjustment made, the observed outcome, and any remaining limitation.</dd></div>
+</dl>
+<div class="m-reference-note"><h3>Protocol &amp; reference notes</h3><p>Brief workflow summaries and relevant published references will accompany the examples. Shareable detailed protocols can be linked where appropriate.</p></div>
 </section>
-</main><footer class="site-footer">
+<nav class="m-resources" aria-label="Related resources"><a href="research.html">Research overview →</a><a href="icamanalyzer.html">Analysis software →</a><a href="figures.html">Figures &amp; illustration →</a></nav>
+</div></main>
+<footer class="site-footer">
 <div class="container">
 <div class="footer-grid">
 <div>
@@ -106,5 +133,4 @@
 </div>
 </footer>
 <script src="js/main.js?v=20261011"></script>
-</body>
-</html>
+</body></html>
