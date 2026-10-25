@@ -57,6 +57,25 @@ var TRAVEL_PINS = [
     photos: ["assets/img/travel/biochip-jeju-2025.jpg"]
   },
   {
+    id: "luxembourg-christmas",
+    name: "Luxembourg City, Luxembourg",
+    tag: "Christmas with friends · 2019",
+    category: "personal",
+    lat: 49.6116,
+    lon: 6.1319,
+    episode: "Exploring Christmas markets with friends and watching a classic film in an old cinema on Christmas Day — it was almost too romantic to be real. 🥹",
+    photos: [
+      "assets/img/travel/luxembourg-christmas/01-christmas-market.jpg",
+      "assets/img/travel/luxembourg-christmas/02-cinema-staircase.jpg",
+      "assets/img/travel/luxembourg-christmas/03-vintage-cinema.jpg",
+      "assets/img/travel/luxembourg-christmas/04-movie-tickets.jpg",
+      "assets/img/travel/luxembourg-christmas/05-christmas-mugs.jpg",
+      "assets/img/travel/luxembourg-christmas/06-friends-at-market.jpg",
+      "assets/img/travel/luxembourg-christmas/07-luxembourg-skyline.jpg",
+      "assets/img/travel/luxembourg-christmas/08-luxembourg-overlook.jpg"
+    ]
+  },
+  {
     id: "example-personal",
     name: "Add your personal trip",
     tag: "Example pin — edit me",
