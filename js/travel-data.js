@@ -27,14 +27,14 @@ var TRAVEL_PINS = [
     photos: []
   },
   {
-    id: "example-exchange",
-    name: "Add your exchange program",
-    tag: "Example pin — edit me",
+    id: "lille-exchange-2019",
+    name: "Lille, France",
+    tag: "ISA Lille · Sep–Dec 2019",
     category: "exchange",
-    lat: 48.8566,
-    lon: 2.3522,
-    episode: "Placeholder (currently Paris) for an exchange-student trip. Edit js/travel-data.js: update name/tag/episode, set lat/lon, and add photos to assets/img/travel/.",
-    photos: []
+    lat: 50.6292,
+    lon: 3.0573,
+    episode: "I spent the fall semester at ISA Lille, Université Catholique de Lille, taking master’s-level courses as an exchange student.",
+    photos: ["assets/img/travel/france-exchange/group.jpg"]
   },
   {
     id: "birdbrain-pittsburgh",
