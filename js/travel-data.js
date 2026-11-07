@@ -74,15 +74,5 @@ var TRAVEL_PINS = [
       "assets/img/travel/luxembourg-christmas/07-luxembourg-skyline.jpg",
       "assets/img/travel/luxembourg-christmas/08-luxembourg-overlook.jpg"
     ]
-  },
-  {
-    id: "example-personal",
-    name: "Add your personal trip",
-    tag: "Example pin — edit me",
-    category: "personal",
-    lat: 13.7563,
-    lon: 100.5018,
-    episode: "Placeholder (currently Bangkok) for a personal trip. Edit js/travel-data.js: update name/tag/episode, set lat/lon, and add photos to assets/img/travel/.",
-    photos: []
   }
 ];

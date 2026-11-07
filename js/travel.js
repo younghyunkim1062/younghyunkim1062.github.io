@@ -112,6 +112,15 @@ document.addEventListener('DOMContentLoaded', function () {
     pinGroups.push({ pin: pin, g: g });
 
     function show() {
+      var card = document.getElementById(pin.id);
+      if (card) {
+        document.dispatchEvent(new CustomEvent('journal:reveal', { detail: pin.id }));
+        var album = card.querySelector('details');
+        if (album) album.open = true;
+        card.focus({ preventScroll: true });
+        card.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+        return;
+      }
       var photosHtml = '';
       if (pin.photos && pin.photos.length) {
         photosHtml = '<div class="grid grid-3" style="margin-top:16px;">' +
@@ -132,8 +141,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     g.addEventListener('click', show);
-    g.addEventListener('keypress', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') show();
+    g.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(); }
     });
   });
 
