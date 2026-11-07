@@ -26,6 +26,29 @@ document.addEventListener('DOMContentLoaded', function () {
       if (event.key === 'Escape') { item.classList.remove('open'); button.setAttribute('aria-expanded', 'false'); button.focus(); }
     });
   });
+  // Reset collapsed navigation when a resized PC window crosses the mobile breakpoint.
+  var compactNavigation = window.matchMedia('(max-width: 860px)');
+  function closeNavigation() {
+    if (links) links.classList.remove('open');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    document.querySelectorAll('.has-dropdown.open').forEach(function (item) {
+      item.classList.remove('open');
+      var button = item.querySelector('.submenu-toggle');
+      if (button) button.setAttribute('aria-expanded', 'false');
+    });
+  }
+  compactNavigation.addEventListener('change', closeNavigation);
+  if (links && toggle) {
+    links.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && compactNavigation.matches) {
+        closeNavigation();
+        toggle.focus();
+      }
+    });
+    links.addEventListener('click', function (event) {
+      if (event.target.closest('a') && compactNavigation.matches) closeNavigation();
+    });
+  }
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   function respectMotion() {
     document.querySelectorAll('video').forEach(function (video) {

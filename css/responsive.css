@@ -1,0 +1,107 @@
+/* Fluid layout: keep the editorial design while adapting to window width. */
+:root {
+  --max-width: 1536px;
+  --page-gutter: clamp(20px, 4vw, 64px);
+  --section-space: clamp(32px, 4.5vw, 64px);
+  --layout-gap: clamp(24px, 4vw, 56px);
+  --card-gap: clamp(16px, 2vw, 28px);
+}
+
+.container, .nav {
+  width: 100%;
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+section { padding-block: var(--section-space); }
+section.tight { padding-block: clamp(24px, 3vw, 40px); }
+.hero { padding-block: clamp(28px, 4vw, 56px); }
+.hero-grid { gap: var(--layout-gap); grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr); }
+.hero-grid > *, .grid > *, .footer-grid > * { min-width: 0; }
+.grid { gap: var(--card-gap); }
+.card { padding: clamp(18px, 2vw, 26px); }
+.section-head { margin-bottom: clamp(24px, 3vw, 40px); }
+h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; }
+p { text-wrap: pretty; }
+video { max-width: 100%; }
+.btn-row { gap: clamp(8px, 1vw, 14px); }
+.nav { gap: clamp(12px, 1.5vw, 20px); padding-block: clamp(12px, 1.25vw, 16px); }
+.brand { flex-shrink: 0; }
+.nav-links a.nav-link { padding-inline: clamp(6px, .85vw, 12px); }
+.footer-nowrap { white-space: normal; }
+
+.home-research-section, .featured-publication-section,
+.home-turning-points-section, .home-blog-section, .home-about-teaser-section {
+  padding-block: var(--section-space);
+}
+.home-research-section .section-head, .featured-publication-section .section-head,
+.home-turning-points-section .section-head, .home-blog-section .section-head {
+  margin-bottom: clamp(24px, 2.5vw, 36px);
+}
+.home-research-section .card { padding: clamp(18px, 1.8vw, 24px); }
+.home-research-section .card > a { display: inline-block; margin-top: auto; padding-top: 4px; }
+.home-research-section .flow-card { display: flex; flex-direction: column; }
+/* Existing connecting arrows assumed a fixed gap; remove them as cards reflow. */
+.home-research-section .research-flow .flow-card:not(:last-child)::before,
+.home-research-section .research-flow .flow-card:not(:last-child)::after { display: none; }
+.featured-pub { gap: clamp(22px, 3vw, 40px); }
+.featured-pub-summary, .home-about-teaser-section .section-head p { max-width: 62ch; }
+.home-about-teaser-section .section-head { margin-bottom: 0; }
+.home-about-teaser-section .about-profile-wrap { max-width: 560px; margin-block: 0; }
+.home-about-teaser-section .about-profile-photo { aspect-ratio: 854 / 480; object-fit: contain; }
+
+/* Source order is intro, video, details. Desktop places the video alongside both text rows. */
+.home-hero-grid { row-gap: 0; }
+.home-hero-intro { grid-column: 1; grid-row: 1; align-self: end; }
+.home-hero-followup { grid-column: 1; grid-row: 2; align-self: start; }
+.home-hero-media { grid-column: 2; grid-row: 1 / 3; align-self: center; }
+.home-hero-grid h1 { max-width: 22ch; font-size: clamp(1.95rem, 1.1rem + 2vw, 2.8rem); }
+.home-hero-intro p, .home-hero-followup p {
+  max-width: 60ch;
+  font-size: clamp(1rem, .92rem + .22vw, 1.1rem);
+  line-height: 1.65;
+}
+.home-hero-media .hero-photo-frame { max-width: 560px; margin-inline: auto; }
+.home-hero-media .hero-video-caption { max-width: 52ch; margin: 10px auto 0; }
+.home-hero-media .hero-photo-frame.video-frame .video-hover-caption { bottom: 52px; }
+
+/* Research-specific styles otherwise override the shared section spacing. */
+.r-hero { padding-block: clamp(28px, 4vw, 56px); gap: var(--layout-gap); }
+.r-hero h1 { font-size: clamp(2rem, 1.15rem + 2.5vw, 3.3rem); }
+.r-hero p { max-width: 62ch; font-size: clamp(.95rem, .9rem + .15vw, 1.05rem); }
+.r-projects { gap: var(--card-gap); }
+.r-project-copy { padding: clamp(20px, 2.1vw, 28px); }
+.r-current { padding: clamp(20px, 3vw, 38px); margin-top: clamp(28px, 3.5vw, 46px); }
+.r-current-grid, .r-columns { gap: clamp(22px, 3vw, 40px); }
+.r-block { padding-block: clamp(28px, 3.5vw, 46px); }
+.r-lead, .r-reading { max-width: 68ch; }
+
+@media (max-width: 860px) {
+  .nav-links { flex-wrap: nowrap; max-height: calc(100dvh - 72px); overflow-y: auto; }
+  .nav-links a.nav-link { padding: 10px 12px; }
+}
+@media (max-width: 840px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .home-hero-grid { row-gap: clamp(20px, 3.5vw, 32px); }
+  .home-hero-intro, .home-hero-media, .home-hero-followup { grid-column: auto; grid-row: auto; }
+  .home-hero-intro p { margin-bottom: 0; }
+  .home-hero-grid h1 { max-width: 24ch; }
+  .home-hero-media { width: min(100%, 400px); justify-self: center; }
+  .home-hero-intro, .home-hero-followup { width: 100%; max-width: 65ch; justify-self: center; }
+  .home-about-teaser-section .about-profile-wrap { margin-inline: auto; }
+  .about-intro .about-profile-wrap { margin: 0 auto; }
+}
+@media (min-width: 621px) and (max-width: 900px) {
+  .home-research-section .research-flow { grid-template-columns: minmax(0, 1fr); }
+  .home-research-section .flow-card p { max-width: 68ch; }
+}
+@media (max-width: 620px) {
+  .home-hero-media { width: min(100%, 340px); }
+  .home-hero-grid h1 { font-size: clamp(1.8rem, 1.2rem + 2.5vw, 2.3rem); }
+  .home-hero-grid .btn { min-height: 44px; padding-inline: 14px; }
+  .featured-pub-links { gap: 12px 18px; }
+  .featured-pub-meta { row-gap: 4px; }
+  .r-section-head { flex-wrap: wrap; gap: 8px; }
+  .r-section-head p { max-width: none; text-align: left; }
+  .r-hero h1 br { display: none; }
+  .site-footer { margin-top: 16px; }
+}
