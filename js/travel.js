@@ -74,6 +74,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var cx = xy[0];
     var cy = xy[1];
     var color = categoryMeta(pin.category).color;
+    // Separate nearby hit targets; leader lines retain the true locations.
+    var offsets = {
+      'seoul': [0, -14], 'biochip-jeju': [0, 14],
+      'lille-exchange-2019': [-15, -9], 'luxembourg-christmas': [15, 9]
+    };
+    var offset = offsets[pin.id] || [0, 0];
+    var actualX = cx, actualY = cy;
+    cx += offset[0]; cy += offset[1];
 
     var g = document.createElementNS(ns, 'g');
     g.setAttribute('class', 'map-pin');
@@ -81,7 +89,21 @@ document.addEventListener('DOMContentLoaded', function () {
     g.setAttribute('role', 'button');
     g.setAttribute('aria-label', pin.name);
 
+    if (offset[0] || offset[1]) {
+      var leader = document.createElementNS(ns, 'line');
+      leader.setAttribute('class', 'pin-leader');
+      leader.setAttribute('x1', actualX); leader.setAttribute('y1', actualY);
+      leader.setAttribute('x2', cx); leader.setAttribute('y2', cy);
+      leader.setAttribute('stroke', color); leader.setAttribute('stroke-width', '1');
+      g.appendChild(leader);
+    }
+    var hit = document.createElementNS(ns, 'circle');
+    hit.setAttribute('class', 'pin-hit');
+    hit.setAttribute('cx', cx); hit.setAttribute('cy', cy);
+    hit.setAttribute('r', '14'); hit.setAttribute('fill', 'transparent');
+    g.appendChild(hit);
     var halo = document.createElementNS(ns, 'circle');
+    halo.setAttribute('class', 'pin-halo');
     halo.setAttribute('cx', cx);
     halo.setAttribute('cy', cy);
     halo.setAttribute('r', 13);
@@ -89,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
     halo.setAttribute('opacity', '0.22');
 
     var dot = document.createElementNS(ns, 'circle');
+    dot.setAttribute('class', 'pin-dot');
     dot.setAttribute('cx', cx);
     dot.setAttribute('cy', cy);
     dot.setAttribute('r', 6);
@@ -97,9 +120,11 @@ document.addEventListener('DOMContentLoaded', function () {
     dot.setAttribute('stroke-width', '2');
 
     var label = document.createElementNS(ns, 'text');
-    label.setAttribute('x', cx);
-    label.setAttribute('y', cy - 16);
-    label.setAttribute('text-anchor', 'middle');
+    var leftLabel = pin.id === 'lille-exchange-2019';
+    var rightLabel = pin.id === 'luxembourg-christmas';
+    label.setAttribute('x', cx + (leftLabel ? -18 : rightLabel ? 18 : 0));
+    label.setAttribute('y', (leftLabel || rightLabel) ? cy + 4 : cy + (pin.id === 'biochip-jeju' ? 26 : -18));
+    label.setAttribute('text-anchor', leftLabel ? 'end' : rightLabel ? 'start' : 'middle');
     label.setAttribute('font-size', '11');
     label.setAttribute('font-weight', '700');
     label.setAttribute('fill', '#22503f');

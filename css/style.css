@@ -705,11 +705,18 @@ section.tight { padding: 32px 0; }
 
 .map-pin {
   cursor: pointer;
-  transition: transform 0.15s ease;
-  transform-origin: center;
+  /* A stable SVG hit target prevents hover feedback loops. */
+  transform: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
-
-.map-pin:hover { transform: scale(1.3); }
+.map-pin:hover { transform: none; }
+.map-pin .pin-hit { pointer-events: all; }
+.map-pin .pin-halo, .map-pin .pin-dot, .map-pin text { pointer-events: none; }
+.map-pin:hover .pin-halo, .map-pin:focus .pin-halo { opacity: .5; }
+.map-pin:focus .pin-dot { stroke: #173e30; stroke-width: 3; }
+#travel-map { -webkit-user-select: none; user-select: none; }
+#travel-map .pin-leader { pointer-events: none; }
 
 #travel-detail {
   margin-top: 28px;
