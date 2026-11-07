@@ -44,7 +44,7 @@ var TRAVEL_PINS = [
     lat: 40.4406,
     lon: -79.9959,
     episode: "Visited BirdBrain Technologies for the Catalyze Learning Summer Institute — hands-on training with the team behind the Hummingbird robotics platform, and my first experience working directly with an international engineering and education community.",
-    photos: ["assets/img/travel/birdbrain-2018.jpg"]
+    photos: ["assets/img/travel/birdbrain-2018.jpg","assets/img/travel/birdbrain-workshop/workshop-01.jpg","assets/img/travel/birdbrain-workshop/workshop-02.jpg","assets/img/travel/birdbrain-workshop/workshop-03.jpg","assets/img/travel/birdbrain-workshop/workshop-04.jpg","assets/img/travel/birdbrain-workshop/workshop-05.jpg"]
   },
   {
     id: "biochip-jeju",
